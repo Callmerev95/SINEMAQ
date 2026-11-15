@@ -13,7 +13,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 private const val LOG_TAG = "NuvioBaselineProfile"
-private const val TARGET_PACKAGE = "com.nuviodebug.com"
+private const val TARGET_PACKAGE = "com.sinemaqdebug.com"
 private const val LAUNCH_TIMEOUT_MS = 15_000L
 private const val HOME_SETTLE_MS = 6_000L
 private const val DETAILS_SETTLE_MS = 3_000L
