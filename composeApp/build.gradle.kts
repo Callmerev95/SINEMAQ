@@ -560,6 +560,12 @@ configurations.all {
     exclude(group = "androidx.media3", module = "media3-extractor")
 }
 
+compose {
+    resources {
+        packageOfResClass = "nuvio.composeapp.generated.resources"
+    }
+}
+
 composeCompiler {
     stabilityConfigurationFiles.add(project.layout.projectDirectory.file("compose_stability_config.conf"))
     if (providers.gradleProperty("composeCompilerReports").orNull == "true") {
