@@ -20,6 +20,14 @@ cd SINEMAQ
 git submodule update --init
 ```
 
+### Configuration
+
+```bash
+cp local.properties.example local.properties
+```
+
+Then fill in your own keys in `local.properties`. Keys left empty cleanly disable the related integration (Supabase, Sentry, TMDB, Trakt, Simkl, MDBList, Premiumize, IntroDB, IMDb ratings, release signing). The file is gitignored, so real keys are never committed.
+
 ### Android
 
 Android development requires Android Studio and the Android SDK.
