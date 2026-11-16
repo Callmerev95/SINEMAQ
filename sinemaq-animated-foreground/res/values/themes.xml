@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme utama app kamu (sesuaikan parent-nya). -->
+    <style name="Theme.Sinemaq" parent="android:Theme.Material.NoActionBar" />
+
+    <!-- Dipakai SplashActivity setelah splash sistem: window background charcoal agar tidak ada kilatan putih. -->
+    <style name="Theme.Sinemaq.Splash" parent="Theme.Sinemaq">
+        <item name="android:windowBackground">@color/sinemaq_charcoal</item>
+    </style>
+
+    <!-- Splash bawaan sistem (Android 12+ & compat): polos charcoal, tanpa icon. -->
+    <style name="Theme.Sinemaq.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/sinemaq_charcoal</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_empty</item>
+        <item name="postSplashScreenTheme">@style/Theme.Sinemaq.Splash</item>
+    </style>
+</resources>
