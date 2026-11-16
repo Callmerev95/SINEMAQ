@@ -10,4 +10,27 @@
     <style name="Theme.Nuvio.Splash.Ocean" parent="@style/Theme.Nuvio.Splash" />
     <style name="Theme.Nuvio.Splash.Royal" parent="@style/Theme.Nuvio.Splash" />
     <style name="Theme.Nuvio.Splash.Sunset" parent="@style/Theme.Nuvio.Splash" />
+
+    <!-- Splash cold-start SINEMAQ (compat pre-12): charcoal polos, animasi diputar SplashActivity.
+         postSplashScreenTheme wajib keturunan AppCompat (Theme.Nuvio.Splash.*), bukan framework. -->
+    <style name="Theme.Sinemaq.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/sinemaq_charcoal</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_empty</item>
+        <item name="postSplashScreenTheme">@style/Theme.Nuvio</item>
+    </style>
+    <style name="Theme.Sinemaq.Starting.Emerald" parent="@style/Theme.Sinemaq.Starting">
+        <item name="postSplashScreenTheme">@style/Theme.Nuvio</item>
+    </style>
+    <style name="Theme.Sinemaq.Starting.Gold" parent="@style/Theme.Sinemaq.Starting">
+        <item name="postSplashScreenTheme">@style/Theme.Nuvio</item>
+    </style>
+    <style name="Theme.Sinemaq.Starting.Ocean" parent="@style/Theme.Sinemaq.Starting">
+        <item name="postSplashScreenTheme">@style/Theme.Nuvio</item>
+    </style>
+    <style name="Theme.Sinemaq.Starting.Royal" parent="@style/Theme.Sinemaq.Starting">
+        <item name="postSplashScreenTheme">@style/Theme.Nuvio</item>
+    </style>
+    <style name="Theme.Sinemaq.Starting.Sunset" parent="@style/Theme.Sinemaq.Starting">
+        <item name="postSplashScreenTheme">@style/Theme.Nuvio</item>
+    </style>
 </resources>
