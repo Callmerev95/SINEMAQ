@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="assets/sinemaq-logo.png" alt="SINEMAQ" width="320" />
+  <img src="assets/sinemaq-logo-alpha.png" alt="SINEMAQ" width="320" />
 
   <p>
     A free, open-source media app for your phone, your desktop, and the TV you already own.
