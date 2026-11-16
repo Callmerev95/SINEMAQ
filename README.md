@@ -1,28 +1,23 @@
 <div align="center">
 
-  <img src="https://nuvio.tv/assets/nuvio-app-logo-wordmark.webp" alt="Nuvio" width="320" />
+  <img src="assets/sinemaq-logo.png" alt="SINEMAQ" width="320" />
 
   <p>
     A free, open-source media app for your phone, your desktop, and the TV you already own.
     <br />
-    Bring your own sources. Nuvio turns them into a library with artwork, ratings, subtitles, and your place saved on every screen.
+    Bring your own sources. SINEMAQ turns them into a library with artwork, ratings, subtitles, and your place saved on every screen.
   </p>
 
-  [Website](https://nuvio.tv) · [GitHub releases](https://github.com/NuvioMedia/NuvioMobile/releases/latest) · [Support Nuvio](https://nuvio.tv/support)
+  [GitHub releases](https://github.com/Callmerev95/SINEMAQ/releases/latest)
 
 </div>
-
-## Get Nuvio Mobile
-
-- [Android on Google Play](https://play.google.com/store/apps/details?id=com.nuvio.app)
-- [Android APK](https://github.com/NuvioMedia/NuvioMobile/releases/latest)
-- iOS via AltStore or SideStore: add [this source URL](https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/cmp-rewrite/store.json) in the app's Sources section, then install Nuvio.
 
 ## Build from source
 
 ```bash
-git clone https://github.com/NuvioMedia/NuvioMobile.git
-cd NuvioMobile
+git clone https://github.com/Callmerev95/SINEMAQ.git
+cd SINEMAQ
+git submodule update --init
 ```
 
 ### Android
@@ -49,6 +44,10 @@ env NUVIO_IOS_DISTRIBUTION=full xcodebuild \
 ```
 
 The shared app is built with Kotlin Multiplatform and Compose Multiplatform.
+
+## Attribution
+
+SINEMAQ is based on [NuvioMobile](https://github.com/NuvioMedia/NuvioMobile) by NuvioMedia, licensed under the [GNU General Public License v3.0](./LICENSE). All upstream attribution is preserved.
 
 ## License
 
