@@ -10,23 +10,23 @@
         <item name="postSplashScreenTheme">@style/Theme.Nuvio</item>
     </style>
 
-    <style name="Theme.Nuvio.Splash.ArcticBlue" parent="@style/Theme.Nuvio.Splash">
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo_arctic_blue</item>
+    <style name="Theme.Nuvio.Splash.Gold" parent="@style/Theme.Nuvio.Splash">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo_gold</item>
     </style>
 
     <style name="Theme.Nuvio.Splash.Emerald" parent="@style/Theme.Nuvio.Splash">
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo_emerald</item>
     </style>
 
-    <style name="Theme.Nuvio.Splash.RoseGold" parent="@style/Theme.Nuvio.Splash">
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo_rose_gold</item>
+    <style name="Theme.Nuvio.Splash.Ocean" parent="@style/Theme.Nuvio.Splash">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo_ocean</item>
     </style>
 
-    <style name="Theme.Nuvio.Splash.Copper" parent="@style/Theme.Nuvio.Splash">
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo_copper</item>
+    <style name="Theme.Nuvio.Splash.Royal" parent="@style/Theme.Nuvio.Splash">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo_royal</item>
     </style>
 
-    <style name="Theme.Nuvio.Splash.Graphite" parent="@style/Theme.Nuvio.Splash">
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo_graphite</item>
+    <style name="Theme.Nuvio.Splash.Sunset" parent="@style/Theme.Nuvio.Splash">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo_sunset</item>
     </style>
 </resources>

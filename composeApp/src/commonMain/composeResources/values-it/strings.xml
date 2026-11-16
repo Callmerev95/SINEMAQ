@@ -2060,13 +2060,13 @@
     <string name="compose_settings_page_privacy_policy">Informativa sulla privacy</string>
     <string name="compose_settings_page_tracking">Tracciamento</string>
     <string name="settings_licenses_attributions_section_ui">LIBRERIE DELL'INTERFACCIA</string>
-    <string name="settings_appearance_app_icon_arctic_blue">Blu artico</string>
+    <string name="settings_appearance_app_icon_gold">Oro</string>
     <string name="settings_appearance_app_icon_android_confirmation_title">Cambiare icona dell'app?</string>
-    <string name="settings_appearance_app_icon_copper">Rame</string>
+    <string name="settings_appearance_app_icon_royal">Reale</string>
     <string name="settings_appearance_app_icon_emerald">Smeraldo</string>
-    <string name="settings_appearance_app_icon_graphite">Grafite</string>
+    <string name="settings_appearance_app_icon_sunset">Tramonto</string>
     <string name="settings_appearance_app_icon_original">Originale</string>
-    <string name="settings_appearance_app_icon_rose_gold">Oro rosa</string>
+    <string name="settings_appearance_app_icon_ocean">Oceano</string>
     <string name="settings_nav_bar_style_classic">Classico</string>
     <string name="layout_catalog_type">Mostra tipo di catalogo</string>
     <string name="layout_catalog_type_sub">Mostra il suffisso del tipo accanto al nome del catalogo (Film/Serie).</string>

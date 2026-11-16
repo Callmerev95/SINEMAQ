@@ -39,9 +39,9 @@ class AppIconRepositoryTest {
 
     @Test
     fun returningToOriginalOverridesAnOlderPlatformIcon() = runTest {
-        AppIconRepository.select(AppIconOption.COPPER)
+        AppIconRepository.select(AppIconOption.ROYAL)
         AppIconRepository.select(AppIconOption.ORIGINAL)
-        assertTrue(AppIconPlatform.activateIcon(AppIconOption.COPPER.platformName))
+        assertTrue(AppIconPlatform.activateIcon(AppIconOption.ROYAL.platformName))
         reloadRepository()
         assertEquals(AppIconOption.ORIGINAL.key, AppIconPlatform.loadSelectedIconKey())
         assertEquals(AppIconOption.ORIGINAL, AppIconRepository.state.value.selected)
@@ -49,10 +49,10 @@ class AppIconRepositoryTest {
 
     @Test
     fun existingPlatformIconIsSavedOnFirstLoad() = runTest {
-        assertTrue(AppIconPlatform.activateIcon(AppIconOption.COPPER.platformName))
+        assertTrue(AppIconPlatform.activateIcon(AppIconOption.ROYAL.platformName))
         AppIconRepository.ensureLoaded()
-        assertEquals(AppIconOption.COPPER, AppIconRepository.state.value.selected)
-        assertEquals(AppIconOption.COPPER.key, AppIconPlatform.loadSelectedIconKey())
+        assertEquals(AppIconOption.ROYAL, AppIconRepository.state.value.selected)
+        assertEquals(AppIconOption.ROYAL.key, AppIconPlatform.loadSelectedIconKey())
     }
 
     @Test
@@ -66,7 +66,7 @@ class AppIconRepositoryTest {
 
     @Test
     fun failedChangeKeepsTheSavedIcon() = runTest {
-        AppIconRepository.select(AppIconOption.COPPER)
+        AppIconRepository.select(AppIconOption.ROYAL)
         val contextField = AppIconPlatform::class.java.getDeclaredField("context").apply {
             isAccessible = true
         }
@@ -74,14 +74,14 @@ class AppIconRepositoryTest {
         try {
             AppIconRepository.select(AppIconOption.EMERALD)
             assertTrue(AppIconRepository.state.value.changeFailed)
-            assertEquals(AppIconOption.COPPER, AppIconRepository.state.value.selected)
+            assertEquals(AppIconOption.ROYAL, AppIconRepository.state.value.selected)
             assertNull(AppIconRepository.state.value.pending)
         } finally {
             AppIconPlatform.initialize(RuntimeEnvironment.getApplication())
         }
         reloadRepository()
-        assertEquals(AppIconOption.COPPER.key, AppIconPlatform.loadSelectedIconKey())
-        assertEquals(AppIconOption.COPPER, AppIconRepository.state.value.selected)
+        assertEquals(AppIconOption.ROYAL.key, AppIconPlatform.loadSelectedIconKey())
+        assertEquals(AppIconOption.ROYAL, AppIconRepository.state.value.selected)
         assertFalse(AppIconRepository.state.value.changeFailed)
     }
 

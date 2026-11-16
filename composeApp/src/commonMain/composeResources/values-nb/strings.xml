@@ -1325,13 +1325,13 @@ Du bruker denne funksjonen helt på eget ansvar. P2P kan deaktiveres når som he
     <string name="settings_appearance_app_icon">Appikon</string>
     <string name="settings_appearance_app_icon_android_confirmation_message">Bytte til %1$s lukker Nuvio. Trykk OK for å fortsette.</string>
     <string name="settings_appearance_app_icon_android_confirmation_title">Bytte appikon?</string>
-    <string name="settings_appearance_app_icon_arctic_blue">Arctic Blue</string>
+    <string name="settings_appearance_app_icon_gold">Gull</string>
     <string name="settings_appearance_app_icon_change_failed">Ikonet kunne ikke endres. Prøv igjen.</string>
-    <string name="settings_appearance_app_icon_copper">Copper</string>
+    <string name="settings_appearance_app_icon_royal">Kongelig</string>
     <string name="settings_appearance_app_icon_emerald">Emerald</string>
-    <string name="settings_appearance_app_icon_graphite">Graphite</string>
+    <string name="settings_appearance_app_icon_sunset">Solnedgang</string>
     <string name="settings_appearance_app_icon_original">Original</string>
-    <string name="settings_appearance_app_icon_rose_gold">Rose Gold</string>
+    <string name="settings_appearance_app_icon_ocean">Osean</string>
     <string name="settings_appearance_app_icon_sheet_title">Velg appikon</string>
     <string name="settings_appearance_app_language">Appspråk</string>
     <string name="settings_appearance_app_language_device">Enhetsspråk</string>

@@ -106,14 +106,14 @@
         </activity>
 
         <activity
-            android:name="com.nuvio.app.launcher.AppIconArcticBlue"
+            android:name="com.nuvio.app.launcher.AppIconGold"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:enabled="false"
             android:exported="true"
-            android:icon="@mipmap/ic_launcher_arctic_blue"
+            android:icon="@mipmap/ic_launcher_gold"
             android:label="@string/app_name"
             android:supportsPictureInPicture="true"
-            android:theme="@style/Theme.Nuvio.Splash.ArcticBlue">
+            android:theme="@style/Theme.Nuvio.Splash.Gold">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -136,14 +136,14 @@
         </activity>
 
         <activity
-            android:name="com.nuvio.app.launcher.AppIconRoseGold"
+            android:name="com.nuvio.app.launcher.AppIconOcean"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:enabled="false"
             android:exported="true"
-            android:icon="@mipmap/ic_launcher_rose_gold"
+            android:icon="@mipmap/ic_launcher_ocean"
             android:label="@string/app_name"
             android:supportsPictureInPicture="true"
-            android:theme="@style/Theme.Nuvio.Splash.RoseGold">
+            android:theme="@style/Theme.Nuvio.Splash.Ocean">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -151,14 +151,14 @@
         </activity>
 
         <activity
-            android:name="com.nuvio.app.launcher.AppIconCopper"
+            android:name="com.nuvio.app.launcher.AppIconRoyal"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:enabled="false"
             android:exported="true"
-            android:icon="@mipmap/ic_launcher_copper"
+            android:icon="@mipmap/ic_launcher_royal"
             android:label="@string/app_name"
             android:supportsPictureInPicture="true"
-            android:theme="@style/Theme.Nuvio.Splash.Copper">
+            android:theme="@style/Theme.Nuvio.Splash.Royal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -166,14 +166,14 @@
         </activity>
 
         <activity
-            android:name="com.nuvio.app.launcher.AppIconGraphite"
+            android:name="com.nuvio.app.launcher.AppIconSunset"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:enabled="false"
             android:exported="true"
-            android:icon="@mipmap/ic_launcher_graphite"
+            android:icon="@mipmap/ic_launcher_sunset"
             android:label="@string/app_name"
             android:supportsPictureInPicture="true"
-            android:theme="@style/Theme.Nuvio.Splash.Graphite">
+            android:theme="@style/Theme.Nuvio.Splash.Sunset">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
