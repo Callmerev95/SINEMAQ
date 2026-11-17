@@ -244,12 +244,12 @@ val releaseAppVersionCode = readXcconfigValue(appVersionConfigFile, "CURRENT_PRO
     ?: error("CURRENT_PROJECT_VERSION is missing or invalid in ${appVersionConfigFile.path}")
 val iosDistribution = (
     providers.gradleProperty("nuvio.ios.distribution").orNull
-        ?: System.getenv("NUVIO_IOS_DISTRIBUTION")
-        ?: supabaseProps.getProperty("NUVIO_IOS_DISTRIBUTION")
+        ?: System.getenv("SINEMAQ_IOS_DISTRIBUTION")
+        ?: supabaseProps.getProperty("SINEMAQ_IOS_DISTRIBUTION")
         ?: "appstore"
     ).trim().lowercase()
 require(iosDistribution == "appstore" || iosDistribution == "full") {
-    "NUVIO_IOS_DISTRIBUTION must be 'appstore' or 'full'."
+    "SINEMAQ_IOS_DISTRIBUTION must be 'appstore' or 'full'."
 }
 val iosDistributionSourceDir = if (iosDistribution == "full") {
     "src/iosFull/kotlin"
@@ -274,7 +274,7 @@ require(requestedAndroidDistributions.size <= 1) {
     "Build Android full and playstore distributions separately, or set -Pnuvio.android.distribution=full|playstore."
 }
 val configuredAndroidDistribution = providers.gradleProperty("nuvio.android.distribution").orNull
-    ?: supabaseProps.getProperty("NUVIO_ANDROID_DISTRIBUTION")
+    ?: supabaseProps.getProperty("SINEMAQ_ANDROID_DISTRIBUTION")
 val isAmbiguousAndroidPackageTask = requestedGradleTasks.any { taskName ->
     taskName == "build" ||
         taskName.startsWith("assemble") ||
@@ -320,9 +320,9 @@ val generateRuntimeConfigs = tasks.register<GenerateRuntimeConfigsTask>("generat
     localPropertiesFile.set(rootProject.layout.projectDirectory.file("local.properties"))
     appVersionName.set(releaseAppVersionName)
     appVersionCode.set(releaseAppVersionCode)
-    supabaseUrl.set(runtimeConfigValue("NUVIO_SUPABASE_URL"))
-    supabaseAnonKey.set(runtimeConfigValue("NUVIO_SUPABASE_ANON_KEY"))
-    supabaseFallbackUrl.set(runtimeConfigValue("NUVIO_SUPABASE_FALLBACK_URL"))
+    supabaseUrl.set(runtimeConfigValue("SINEMAQ_SUPABASE_URL"))
+    supabaseAnonKey.set(runtimeConfigValue("SINEMAQ_SUPABASE_ANON_KEY"))
+    supabaseFallbackUrl.set(runtimeConfigValue("SINEMAQ_SUPABASE_FALLBACK_URL"))
     sentryDsn.set(runtimeConfigValue("SENTRY_DSN"))
     tmdbApiKey.set(runtimeConfigValue("TMDB_API_KEY"))
     sentryEnvironment.set(

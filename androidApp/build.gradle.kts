@@ -25,10 +25,10 @@ val localProps = Properties().apply {
     val propsFile = rootProject.file("local.properties")
     if (propsFile.exists()) propsFile.inputStream().use { load(it) }
 }
-val releaseStoreFile = localProps.getProperty("NUVIO_RELEASE_STORE_FILE")?.takeIf { it.isNotBlank() }
-val releaseStorePassword = localProps.getProperty("NUVIO_RELEASE_STORE_PASSWORD")?.takeIf { it.isNotBlank() }
-val releaseKeyAlias = localProps.getProperty("NUVIO_RELEASE_KEY_ALIAS")?.takeIf { it.isNotBlank() }
-val releaseKeyPassword = localProps.getProperty("NUVIO_RELEASE_KEY_PASSWORD")?.takeIf { it.isNotBlank() }
+val releaseStoreFile = localProps.getProperty("SINEMAQ_RELEASE_STORE_FILE")?.takeIf { it.isNotBlank() }
+val releaseStorePassword = localProps.getProperty("SINEMAQ_RELEASE_STORE_PASSWORD")?.takeIf { it.isNotBlank() }
+val releaseKeyAlias = localProps.getProperty("SINEMAQ_RELEASE_KEY_ALIAS")?.takeIf { it.isNotBlank() }
+val releaseKeyPassword = localProps.getProperty("SINEMAQ_RELEASE_KEY_PASSWORD")?.takeIf { it.isNotBlank() }
 val releaseKeystore = releaseStoreFile?.let(rootProject::file)
 fun envOrLocalProperty(key: String): String? =
     providers.environmentVariable(key).orNull?.trim()?.takeIf { it.isNotBlank() }
