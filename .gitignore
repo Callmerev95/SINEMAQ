@@ -37,3 +37,10 @@ iosApp/Configuration/DeviceSigning.local.json
 
 # Local MPVKit iOS build environment (sparse APFS image, see MPVKit docs)
 .mpvkit-build.sparseimage
+
+# Avatar catalog seed assets (live in Supabase Storage, not the repo)
+sinemaq-avatar/
+*.webp
+avatars.csv
+avatars.json
+avatars_30.zip

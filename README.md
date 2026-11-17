@@ -17,7 +17,8 @@
 ```bash
 git clone https://github.com/Callmerev95/SINEMAQ.git
 cd SINEMAQ
-git submodule update --init
+# Android: done — native .so ship as prebuilt AARs + Maven, no submodules needed.
+# iOS only: git submodule update --init
 ```
 
 ### Configuration
