@@ -140,6 +140,7 @@ object ProfileRepository {
             if (_state.value.activeProfile != null) {
                 activeProfileIndex = _state.value.activeProfile!!.profileIndex
             }
+            syncPinCache(_state.value.profiles)
             persist()
         } catch (e: Throwable) {
             if (AuthRepository.signOutIfSessionInvalid(e, "Profile pull")) return
@@ -490,18 +491,6 @@ object ProfileRepository {
             message = localizedString(Res.string.profile_pin_offline_verification_requires_online),
         )
 
-        if (
-            cached.profileUpdatedAt.isNotBlank() &&
-            profile.updatedAt.isNotBlank() &&
-            cached.profileUpdatedAt != profile.updatedAt
-        ) {
-            ProfilePinCacheStorage.removePayload(profileIndex)
-            return PinVerifyResult(
-                unlocked = false,
-                message = localizedString(Res.string.profile_pin_changed_requires_refresh),
-            )
-        }
-
         val digest = hashProfilePin(profileIndex = profileIndex, salt = cached.salt, pin = pin)
         return if (digest == cached.digest) {
             PinVerifyResult(unlocked = true)
@@ -522,18 +511,10 @@ object ProfileRepository {
             val raw = ProfilePinCacheStorage.loadPayload(profileIndex).orEmpty().trim()
             if (raw.isEmpty()) continue
 
-            val cached = runCatching {
+            val decoded = runCatching {
                 json.decodeFromString<CachedProfilePinPayload>(raw)
-            }.getOrNull() ?: run {
-                ProfilePinCacheStorage.removePayload(profileIndex)
-                continue
-            }
-
-            if (
-                cached.profileUpdatedAt.isNotBlank() &&
-                profile.updatedAt.isNotBlank() &&
-                cached.profileUpdatedAt != profile.updatedAt
-            ) {
+            }.getOrNull()
+            if (decoded == null) {
                 ProfilePinCacheStorage.removePayload(profileIndex)
             }
         }

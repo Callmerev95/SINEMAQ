@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sinemaq adaptive icon - monochrome layer (Android 13+ themed icons) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <group
+        android:translateX="15.600"
+        android:translateY="16.800"
+        android:scaleX="0.15"
+        android:scaleY="0.15">
+        <path
+            android:pathData="M118,238 a128,128 0 1,0 256,0 a128,128 0 1,0 -256,0"
+            android:strokeWidth="50"
+            android:strokeColor="#FF000000"
+            android:fillColor="#00000000" />
+        <path
+            android:pathData="M341,333 L394,386"
+            android:strokeWidth="50"
+            android:strokeLineCap="round"
+            android:strokeColor="#FF000000" />
+        <path
+            android:pathData="M222,194 L222,282 L294,238 Z"
+            android:strokeWidth="24"
+            android:strokeLineJoin="round"
+            android:fillColor="#FF000000"
+            android:strokeColor="#FF000000" />
+    </group>
+</vector>

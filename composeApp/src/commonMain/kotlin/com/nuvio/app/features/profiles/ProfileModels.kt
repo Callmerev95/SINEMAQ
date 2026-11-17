@@ -4,6 +4,7 @@ import androidx.compose.ui.graphics.Color
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.Transient
+import nuvio.composeapp.generated.resources.Res
 
 const val MAX_PROFILES = 6
 
@@ -85,6 +86,15 @@ val PROFILE_COLORS = listOf(
     "#7CB342", "#039BE5", "#FFB300", "#6D4C41",
 )
 
+private val ClassicAvatarFiles = mapOf(
+    "classic_01" to "avatar_classic_01.webp",
+    "classic_02" to "avatar_classic_02.webp",
+    "classic_03" to "avatar_classic_03.webp",
+    "classic_04" to "avatar_classic_04.webp",
+    "classic_05" to "avatar_classic_05.webp",
+    "classic_06" to "avatar_classic_06.webp",
+)
+
 fun avatarStorageUrl(storagePath: String): String =
     if (storagePath.startsWith("https://") || storagePath.startsWith("http://")) {
         storagePath
@@ -94,7 +104,14 @@ fun avatarStorageUrl(storagePath: String): String =
 
 fun avatarImageUrl(avatar: AvatarCatalogItem): String? =
     avatar.localImageUrl
+        ?: classicAvatarLocalUri(avatar)
         ?: avatar.storagePath.takeIf { it.isNotBlank() && !avatar.memberOnly }?.let(::avatarStorageUrl)
+
+private fun classicAvatarLocalUri(avatar: AvatarCatalogItem): String? {
+    if (avatar.category != "classics") return null
+    val file = ClassicAvatarFiles[avatar.id] ?: return null
+    return Res.getUri("drawable/$file")
+}
 
 fun normalizedAvatarUrl(url: String?): String? =
     url?.trim()?.takeIf { it.isValidAvatarUrl() }

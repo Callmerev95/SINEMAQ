@@ -1,15 +1,15 @@
 package com.nuvio.app.launcher
 
-import com.nuvio.app.MainActivity
+import com.nuvio.app.SplashActivity
 
-class AppIconDefault : MainActivity()
+class AppIconDefault : SplashActivity()
 
-class AppIconArcticBlue : MainActivity()
+class AppIconEmerald : SplashActivity()
 
-class AppIconEmerald : MainActivity()
+class AppIconGold : SplashActivity()
 
-class AppIconRoseGold : MainActivity()
+class AppIconOcean : SplashActivity()
 
-class AppIconCopper : MainActivity()
+class AppIconRoyal : SplashActivity()
 
-class AppIconGraphite : MainActivity()
+class AppIconSunset : SplashActivity()

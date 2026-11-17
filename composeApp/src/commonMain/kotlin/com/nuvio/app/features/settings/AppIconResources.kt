@@ -8,39 +8,39 @@ import org.jetbrains.compose.resources.StringResource
 internal val AppIconOption.labelResource: StringResource
     get() = when (this) {
         AppIconOption.ORIGINAL -> Res.string.settings_appearance_app_icon_original
-        AppIconOption.ARCTIC_BLUE -> Res.string.settings_appearance_app_icon_arctic_blue
         AppIconOption.EMERALD -> Res.string.settings_appearance_app_icon_emerald
-        AppIconOption.ROSE_GOLD -> Res.string.settings_appearance_app_icon_rose_gold
-        AppIconOption.COPPER -> Res.string.settings_appearance_app_icon_copper
-        AppIconOption.GRAPHITE -> Res.string.settings_appearance_app_icon_graphite
+        AppIconOption.GOLD -> Res.string.settings_appearance_app_icon_gold
+        AppIconOption.OCEAN -> Res.string.settings_appearance_app_icon_ocean
+        AppIconOption.ROYAL -> Res.string.settings_appearance_app_icon_royal
+        AppIconOption.SUNSET -> Res.string.settings_appearance_app_icon_sunset
     }
 
 internal val AppIconOption.previewResource: DrawableResource
     get() = when (this) {
         AppIconOption.ORIGINAL -> Res.drawable.app_icon_original
-        AppIconOption.ARCTIC_BLUE -> Res.drawable.app_icon_arctic_blue
         AppIconOption.EMERALD -> Res.drawable.app_icon_emerald
-        AppIconOption.ROSE_GOLD -> Res.drawable.app_icon_rose_gold
-        AppIconOption.COPPER -> Res.drawable.app_icon_copper
-        AppIconOption.GRAPHITE -> Res.drawable.app_icon_graphite
+        AppIconOption.GOLD -> Res.drawable.app_icon_gold
+        AppIconOption.OCEAN -> Res.drawable.app_icon_ocean
+        AppIconOption.ROYAL -> Res.drawable.app_icon_royal
+        AppIconOption.SUNSET -> Res.drawable.app_icon_sunset
     }
 
 internal val AppIconOption.wordmarkResource: DrawableResource
     get() = when (this) {
         AppIconOption.ORIGINAL -> Res.drawable.app_logo_wordmark_original
-        AppIconOption.ARCTIC_BLUE -> Res.drawable.app_logo_wordmark_arctic_blue
         AppIconOption.EMERALD -> Res.drawable.app_logo_wordmark_emerald
-        AppIconOption.ROSE_GOLD -> Res.drawable.app_logo_wordmark_rose_gold
-        AppIconOption.COPPER -> Res.drawable.app_logo_wordmark_copper
-        AppIconOption.GRAPHITE -> Res.drawable.app_logo_wordmark_graphite
+        AppIconOption.GOLD -> Res.drawable.app_logo_wordmark_gold
+        AppIconOption.OCEAN -> Res.drawable.app_logo_wordmark_ocean
+        AppIconOption.ROYAL -> Res.drawable.app_logo_wordmark_royal
+        AppIconOption.SUNSET -> Res.drawable.app_logo_wordmark_sunset
     }
 
 internal fun AppTheme.wordmarkResource(fallback: AppIconOption): DrawableResource =
     when (this) {
-        AppTheme.GOLD -> Res.drawable.app_logo_wordmark_gold
+        AppTheme.GOLD -> AppIconOption.GOLD.wordmarkResource
         AppTheme.JADE -> AppIconOption.EMERALD.wordmarkResource
-        AppTheme.ROSE_GOLD -> AppIconOption.ROSE_GOLD.wordmarkResource
-        AppTheme.ARCTIC_BLUE -> AppIconOption.ARCTIC_BLUE.wordmarkResource
-        AppTheme.GRAPHITE -> AppIconOption.GRAPHITE.wordmarkResource
+        AppTheme.ROSE_GOLD -> AppIconOption.OCEAN.wordmarkResource
+        AppTheme.ARCTIC_BLUE -> AppIconOption.GOLD.wordmarkResource
+        AppTheme.GRAPHITE -> AppIconOption.SUNSET.wordmarkResource
         else -> fallback.wordmarkResource
     }

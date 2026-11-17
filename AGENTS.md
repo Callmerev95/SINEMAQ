@@ -8,7 +8,7 @@ A media streaming app for Android/iOS/TV, rebranded from [NuvioMobile](https://g
 - **Brand**: SINEMAQ. Application ID `com.sinemaq.app` (debug `com.sinemaqdebug.com`), iOS bundle `com.sinemaq.media`.
 - **Internal Kotlin packages stay `com.nuvio.app`** (deliberate — minimises rebrand risk). See ticket T1.
 - **Build** (Android): `JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/Contents/Home ./gradlew :androidApp:assembleFullDebug`
-- **Submodules**: `MPVKit`, `libass-android` are git submodules, not checked out by default. Fetch before building.
+- **Submodules**: `MPVKit`, `libass-android` are git submodules, **not needed for Android builds** — native `.so` come from prebuilt AARs in `composeApp/libs/` (nuvio-libass, lib-nuvio-engine, lib-*) plus Maven `io.github.abdallahmehiz:mpv-android-lib`. Empty submodules are NOT an Android blocker; only fetch them for iOS.
 - **Secrets/keys** live in `local.properties` (gitignored). Never commit real API keys.
 
 ## Agent skills

@@ -8,25 +8,25 @@ internal enum class AppIconOption(
         key = "original",
         platformName = null,
     ),
-    ARCTIC_BLUE(
-        key = "arctic_blue",
-        platformName = "AppIconArcticBlue",
-    ),
     EMERALD(
         key = "emerald",
         platformName = "AppIconEmerald",
     ),
-    ROSE_GOLD(
-        key = "rose_gold",
-        platformName = "AppIconRoseGold",
+    GOLD(
+        key = "gold",
+        platformName = "AppIconGold",
     ),
-    COPPER(
-        key = "copper",
-        platformName = "AppIconCopper",
+    OCEAN(
+        key = "ocean",
+        platformName = "AppIconOcean",
     ),
-    GRAPHITE(
-        key = "graphite",
-        platformName = "AppIconGraphite",
+    ROYAL(
+        key = "royal",
+        platformName = "AppIconRoyal",
+    ),
+    SUNSET(
+        key = "sunset",
+        platformName = "AppIconSunset",
     ),
     ;
 

@@ -34,7 +34,7 @@ class AppIconOptionTest {
     fun goldThemeUsesGoldWordmark() {
         assertEquals(
             Res.drawable.app_logo_wordmark_gold,
-            AppTheme.GOLD.wordmarkResource(AppIconOption.COPPER),
+            AppTheme.GOLD.wordmarkResource(AppIconOption.ROYAL),
         )
     }
 }

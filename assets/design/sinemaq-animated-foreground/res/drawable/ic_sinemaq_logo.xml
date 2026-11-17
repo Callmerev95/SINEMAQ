@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sinemaq - logo statis (simbol + teks) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:aapt="http://schemas.android.com/aapt"
+android:width="334dp"
+android:height="81dp"
+android:viewportWidth="1669"
+android:viewportHeight="406">
+
+<!-- Simbol "Q" + play -->
+<group
+    android:name="glyph"
+    android:translateX="-53"
+    android:translateY="-45">
+
+    <path
+        android:name="ring"
+        android:pathData="M246,110 a128,128 0 1,1 0,256 a128,128 0 1,1 0,-256"
+        android:strokeWidth="50"
+        android:fillColor="#00000000">
+        <aapt:attr name="android:strokeColor">
+                <gradient
+                    android:type="linear"
+                    android:startX="0" android:startY="0"
+                    android:endX="512" android:endY="512">
+                    <item android:offset="0" android:color="#FFFF2A36" />
+                    <item android:offset="1" android:color="#FFB00610" />
+                </gradient>
+            </aapt:attr>
+    </path>
+
+    <path
+        android:name="tail"
+        android:pathData="M341,333 L394,386"
+        android:strokeWidth="50"
+        android:strokeLineCap="round">
+        <aapt:attr name="android:strokeColor">
+                <gradient
+                    android:type="linear"
+                    android:startX="0" android:startY="0"
+                    android:endX="512" android:endY="512">
+                    <item android:offset="0" android:color="#FFFF2A36" />
+                    <item android:offset="1" android:color="#FFB00610" />
+                </gradient>
+            </aapt:attr>
+    </path>
+
+    <group
+        android:name="play"
+        android:pivotX="246"
+        android:pivotY="238">
+        <path
+            android:pathData="M222,194 L222,282 L294,238 Z"
+            android:strokeWidth="24"
+            android:strokeLineJoin="round">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:type="linear"
+                    android:startX="0" android:startY="0"
+                    android:endX="512" android:endY="512">
+                    <item android:offset="0" android:color="#FFFF2A36" />
+                    <item android:offset="1" android:color="#FFB00610" />
+                </gradient>
+            </aapt:attr>
+            <aapt:attr name="android:strokeColor">
+                <gradient
+                    android:type="linear"
+                    android:startX="0" android:startY="0"
+                    android:endX="512" android:endY="512">
+                    <item android:offset="0" android:color="#FFFF2A36" />
+                    <item android:offset="1" android:color="#FFB00610" />
+                </gradient>
+            </aapt:attr>
+        </path>
+    </group>
+</group>
+
+<!-- Teks S-I-N-E-M-A-Q (Poppins Bold, outline) -->
+<group
+    android:name="L0">
+    <path
+        android:name="P0"
+        android:fillColor="#FFE50914"
+        android:pathData="M430.2 237.8H474.7Q475.6 247.3 481.2 252.3Q486.9 257.3 495.9 257.3Q505.2 257.3 510.5 253Q515.9 248.8 515.9 241.2Q515.9 234.8 511.6 230.7Q507.4 226.5 501.1 223.9Q494.9 221.2 483.4 217.8Q466.8 212.6 456.4 207.5Q445.9 202.4 438.3 192.4Q430.7 182.4 430.7 166.3Q430.7 142.4 448.1 128.8Q465.4 115.3 493.2 115.3Q521.5 115.3 538.8 128.8Q556.2 142.4 557.4 166.5H512.2Q511.7 158.2 506.1 153.5Q500.5 148.7 491.7 148.7Q484.2 148.7 479.5 152.7Q474.9 156.8 474.9 164.3Q474.9 172.6 482.7 177.3Q490.5 181.9 507.1 187.3Q523.7 192.9 534.1 198Q544.4 203.1 552 212.9Q559.6 222.6 559.6 238Q559.6 252.7 552.1 264.6Q544.7 276.6 530.5 283.6Q516.4 290.7 497.1 290.7Q478.3 290.7 463.4 284.6Q448.5 278.5 439.6 266.6Q430.7 254.6 430.2 237.8Z" />
+</group>
+
+<group
+    android:name="L1">
+    <path
+        android:name="P1"
+        android:fillColor="#FFE50914"
+        android:pathData="M639.5 117.7V289H597.8V117.7Z" />
+</group>
+
+<group
+    android:name="L2">
+    <path
+        android:name="P2"
+        android:fillColor="#FFE50914"
+        android:pathData="M835.6 289H793.9L724.1 183.4V289H682.4V117.7H724.1L793.9 223.9V117.7H835.6Z" />
+</group>
+
+<group
+    android:name="L3">
+    <path
+        android:name="P3"
+        android:fillColor="#FFE50914"
+        android:pathData="M920.2 151.2V185.8H976.1V218H920.2V255.6H983.4V289H878.5V117.7H983.4V151.2Z" />
+</group>
+
+<group
+    android:name="L4">
+    <path
+        android:name="P4"
+        android:fillColor="#FFE50914"
+        android:pathData="M1217 117.7V289H1175.3V186.3L1137 289H1103.3L1064.8 186V289H1023.1V117.7H1072.3L1120.4 236.3L1168 117.7Z" />
+</group>
+
+<group
+    android:name="L5">
+    <path
+        android:name="P5"
+        android:fillColor="#FFE50914"
+        android:pathData="M1366.3 258.8H1302.4L1292.1 289H1248.4L1310.4 117.7H1358.7L1420.7 289H1376.5ZM1355.5 226.5 1334.3 163.8 1313.3 226.5Z" />
+</group>
+
+<group
+    android:name="L6">
+    <path
+        android:name="P6"
+        android:fillColor="#FFE50914"
+        android:pathData="M1574.1 318.3 1552.1 288.8Q1542.4 290.7 1533.1 290.7Q1508.9 290.7 1488.8 279.5Q1468.7 268.3 1456.8 248.1Q1445 228 1445 202.9Q1445 177.7 1456.8 157.7Q1468.7 137.7 1488.8 126.5Q1508.9 115.3 1533.1 115.3Q1557.2 115.3 1577.4 126.5Q1597.5 137.7 1609.1 157.7Q1620.7 177.7 1620.7 202.9Q1620.7 224.8 1611.8 243Q1602.9 261.2 1587 273.1L1624.6 318.3ZM1533.1 252.7Q1553.6 252.7 1565.9 239Q1578.2 225.3 1578.2 202.9Q1578.2 180.2 1565.9 166.6Q1553.6 153.1 1533.1 153.1Q1512.3 153.1 1500 166.5Q1487.7 179.9 1487.7 202.9Q1487.7 225.6 1500 239.1Q1512.3 252.7 1533.1 252.7Z" />
+</group>
+
+    </vector>
