@@ -28,6 +28,8 @@ object MemberAccessRepository {
     private val refreshGeneration = MutableStateFlow(0L)
     private val _access = MutableStateFlow(MemberAccess.None)
     val access: StateFlow<MemberAccess> = _access.asStateFlow()
+    private val _resolved = MutableStateFlow(false)
+    val resolved: StateFlow<Boolean> = _resolved.asStateFlow()
     private var started = false
     private var verifiedUserId: String? = null
     private var verifiedAtMs = 0L
@@ -63,6 +65,7 @@ object MemberAccessRepository {
 
     fun clearLocalState() {
         _access.value = MemberAccess.None
+        _resolved.value = false
         verifiedUserId = null
         verifiedAtMs = 0L
         MemberAssetStorage.clearAccess()
@@ -74,11 +77,13 @@ object MemberAccessRepository {
             AuthState.Loading -> return
             AuthState.Unauthenticated -> {
                 _access.value = MemberAccess.None
+                _resolved.value = true
                 return
             }
             is AuthState.Authenticated -> {
                 if (auth.isAnonymous) {
                     _access.value = MemberAccess.None
+                    _resolved.value = true
                     return
                 }
             }
@@ -86,10 +91,16 @@ object MemberAccessRepository {
         val account = auth as AuthState.Authenticated
         val cached = loadCached(account.userId)
         _access.value = cached ?: MemberAccess.None
+        if (cached != null) _resolved.value = true
         warmMemberAssets(_access.value)
-        val remote = fetchWithRetry() ?: return
+        val remote = fetchWithRetry()
+        if (remote == null) {
+            _resolved.value = true
+            return
+        }
         val effective = saveRemote(account.userId, remote)
         _access.value = effective
+        _resolved.value = true
         warmMemberAssets(effective)
         verifiedUserId = account.userId
         verifiedAtMs = EpisodeReleaseDatePlatform.nowEpochMs()

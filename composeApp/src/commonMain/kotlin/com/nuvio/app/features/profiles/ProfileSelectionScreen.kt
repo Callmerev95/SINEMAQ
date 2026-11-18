@@ -85,6 +85,7 @@ fun ProfileSelectionScreen(
     val profileState by ProfileRepository.state.collectAsStateWithLifecycle()
     val scope = rememberCoroutineScope()
     val memberAccess by MemberAccessRepository.access.collectAsStateWithLifecycle()
+    val accessResolved by MemberAccessRepository.resolved.collectAsStateWithLifecycle()
     val profileLimit = memberAccess.tier.profileLimit()
     var showUpgradeDialog by remember { mutableStateOf(false) }
     var pinDialogProfile by remember { mutableStateOf<NuvioProfile?>(null) }
@@ -188,7 +189,7 @@ fun ProfileSelectionScreen(
                 Spacer(modifier = Modifier.height(if (isTabletLayout) 28.dp else 48.dp))
 
                 val profiles = profileState.profiles
-                val items = profiles.size + if (isEditMode) 1 else 0
+                val items = profiles.size + if (isEditMode && accessResolved) 1 else 0
                 val onAddClick: () -> Unit = {
                     if (profiles.size >= profileLimit) showUpgradeDialog = true else onAddProfile()
                 }

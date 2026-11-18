@@ -102,6 +102,7 @@ fun ProfileSwitcherTab(
     val profiles = profileState.profiles
     val avatars by AvatarRepository.avatars.collectAsStateWithLifecycle()
     val memberAccess by MemberAccessRepository.access.collectAsStateWithLifecycle()
+    val accessResolved by MemberAccessRepository.resolved.collectAsStateWithLifecycle()
     val profileLimit = memberAccess.tier.profileLimit()
     var showUpgradeDialog by remember { mutableStateOf(false) }
 
@@ -279,6 +280,7 @@ fun ProfileSwitcherTab(
                     hazeState = hazeState,
                     opensBelow = opensBelow,
                     availableHeight = availableHeight,
+                    showAddProfile = accessResolved,
                     modifier = Modifier.graphicsLayer {
                         alpha = popupAlpha.value
                         scaleX = popupScale.value
@@ -337,6 +339,7 @@ fun NativeProfileSwitcherPopup(
     val profiles = profileState.profiles
     val avatars by AvatarRepository.avatars.collectAsStateWithLifecycle()
     val memberAccess by MemberAccessRepository.access.collectAsStateWithLifecycle()
+    val accessResolved by MemberAccessRepository.resolved.collectAsStateWithLifecycle()
     val profileLimit = memberAccess.tier.profileLimit()
     var showUpgradeDialog by remember { mutableStateOf(false) }
     val tokens = MaterialTheme.nuvio
@@ -473,18 +476,20 @@ fun NativeProfileSwitcherPopup(
                                     )
                                 }
 
-                                PopupAddProfileBubble(
-                                    delayMs = profiles.size * 50,
-                                    onClick = {
-                                        showPopup = false
-                                        onDismissRequest()
-                                        if (profiles.size >= profileLimit) {
-                                            showUpgradeDialog = true
-                                        } else {
-                                            onAddProfileRequested()
-                                        }
-                                    },
-                                )
+                                if (accessResolved) {
+                                    PopupAddProfileBubble(
+                                        delayMs = profiles.size * 50,
+                                        onClick = {
+                                            showPopup = false
+                                            onDismissRequest()
+                                            if (profiles.size >= profileLimit) {
+                                                showUpgradeDialog = true
+                                            } else {
+                                                onAddProfileRequested()
+                                            }
+                                        },
+                                    )
+                                }
                             }
 
                             AnimatedVisibility(

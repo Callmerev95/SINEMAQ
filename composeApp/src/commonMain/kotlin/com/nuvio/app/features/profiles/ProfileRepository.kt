@@ -4,6 +4,7 @@ import co.touchlab.kermit.Logger
 import com.nuvio.app.core.auth.AuthRepository
 import com.nuvio.app.core.auth.AuthState
 import com.nuvio.app.core.auth.isAnonymous
+import com.nuvio.app.core.network.NetworkStatusRepository
 import com.nuvio.app.core.network.SupabaseProvider
 import com.nuvio.app.core.poster.CustomPosterUrlRepository
 import com.nuvio.app.core.sync.ProfileSettingsSync
@@ -313,6 +314,7 @@ object ProfileRepository {
                 putSyncOriginClientId()
             }
             SupabaseProvider.client.postgrest.rpc("sync_delete_profile_data", params)
+            ProfilePinCacheStorage.removePayload(profileIndex)
             ServerRepository.removeProfile(profileIndex)
             pullProfiles()
         } catch (e: Throwable) {
@@ -322,7 +324,8 @@ object ProfileRepository {
     }
 
     suspend fun verifyPin(profileIndex: Int, pin: String): PinVerifyResult {
-        if (AuthRepository.state.value !is AuthState.Authenticated) {
+        val authState = AuthRepository.state.value
+        if (authState !is AuthState.Authenticated) {
             return verifyPinLocally(profileIndex, pin)
         }
 
@@ -332,15 +335,23 @@ object ProfileRepository {
                 put("p_pin", pin)
             }
             val result = SupabaseProvider.client.postgrest.rpc("verify_profile_pin", params)
-            result.decodeSingle<PinVerifyResult>().also { verifyResult ->
+            val decoded = result.decodeAs<PinVerifyResult>()
+            decoded.also { verifyResult ->
                 if (verifyResult.unlocked) {
                     pullProfiles()
                     rememberVerifiedPin(profileIndex = profileIndex, pin = pin)
                 }
             }
         }.getOrElse { e ->
-            log.e(e) { "Failed to verify pin" }
-            verifyPinLocally(profileIndex, pin)
+            log.e(e) { "Failed to verify pin via server" }
+            if (NetworkStatusRepository.uiState.value.isOfflineLike) {
+                verifyPinLocally(profileIndex, pin)
+            } else {
+                PinVerifyResult(
+                    unlocked = false,
+                    message = getString(Res.string.profile_pin_verify_unavailable),
+                )
+            }
         }
     }
 
@@ -357,8 +368,18 @@ object ProfileRepository {
             }
             SupabaseProvider.client.postgrest.rpc("set_profile_pin", params)
             pullProfiles()
-            rememberVerifiedPin(profileIndex = profileIndex, pin = pin)
-            PinVerifyResult(unlocked = true)
+            val persisted = _state.value.profiles
+                .find { it.profileIndex == profileIndex }
+                ?.pinEnabled == true
+            if (persisted) {
+                rememberVerifiedPin(profileIndex = profileIndex, pin = pin)
+                PinVerifyResult(unlocked = true)
+            } else {
+                PinVerifyResult(
+                    unlocked = false,
+                    message = getString(Res.string.profile_pin_set_failed),
+                )
+            }
         }.onFailure { e ->
             log.e(e) { "Failed to set pin" }
         }.getOrElse {
@@ -506,11 +527,8 @@ object ProfileRepository {
     private fun syncPinCache(profiles: List<NuvioProfile>) {
         val profilesByIndex = profiles.associateBy { it.profileIndex }
         for (profileIndex in 1..MAX_PROFILES) {
-            val profile = profilesByIndex[profileIndex]
-            if (profile == null || !profile.pinEnabled) {
-                ProfilePinCacheStorage.removePayload(profileIndex)
-                continue
-            }
+            val profile = profilesByIndex[profileIndex] ?: continue
+            if (!profile.pinEnabled) continue
 
             val raw = ProfilePinCacheStorage.loadPayload(profileIndex).orEmpty().trim()
             if (raw.isEmpty()) continue

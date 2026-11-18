@@ -74,6 +74,7 @@ internal fun ProfilePopupContent(
     opensBelow: Boolean,
     availableHeight: Dp?,
     modifier: Modifier = Modifier,
+    showAddProfile: Boolean = true,
     onBoundsChanged: (Int, Rect) -> Unit,
     onDismissRequest: () -> Unit,
     onProfileSelected: (NuvioProfile) -> Unit,
@@ -86,7 +87,7 @@ internal fun ProfilePopupContent(
     val panelAlignment = if (opensBelow) Alignment.TopCenter else Alignment.BottomCenter
     val dismissPopup by rememberUpdatedState(onDismissRequest)
     var panelBounds by remember { mutableStateOf(Rect.Zero) }
-    val items: List<NuvioProfile?> = profiles + listOf(null)
+    val items: List<NuvioProfile?> = if (showAddProfile) profiles + listOf(null) else profiles
     BoxWithConstraints(modifier.widthIn(max = 336.dp)) {
         val availableWidth = (maxWidth - 32.dp).coerceAtLeast(0.dp)
         val preferredColumns = if (items.size == 4) 2 else items.size.coerceAtMost(3)
