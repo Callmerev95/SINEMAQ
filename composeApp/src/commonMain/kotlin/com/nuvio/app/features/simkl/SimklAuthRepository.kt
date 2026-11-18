@@ -1,12 +1,14 @@
 package com.nuvio.app.features.simkl
 
 import co.touchlab.kermit.Logger
+import com.nuvio.app.features.addons.httpRequestRaw
 import com.nuvio.app.features.tracking.TrackingAuthProvider
 import com.nuvio.app.features.tracking.TrackingCapability
 import com.nuvio.app.features.tracking.TrackingProviderDescriptor
 import com.nuvio.app.features.tracking.TrackingProviderId
 import com.nuvio.app.features.tracking.TrackingProviderRegistry
 import com.nuvio.app.features.tracking.TrackingRefreshIntent
+import io.ktor.http.encodeURLParameter
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -227,21 +229,27 @@ object SimklAuthRepository : TrackingAuthProvider {
                 return@withLock
             }
 
-            val request = SimklTokenRequest(
-                code = callback.code,
-                clientId = SimklConfig.CLIENT_ID,
-                codeVerifier = verifier,
-                redirectUri = SimklConfig.REDIRECT_URI,
-            )
+            // AUTH V2: /oauth2/token menerima application/x-www-form-urlencoded (bukan JSON),
+            // dan kredensial client_id V2 ditolak oleh endpoint V1 (/oauth/token).
+            val formBody = mapOf(
+                "grant_type" to "authorization_code",
+                "client_id" to SimklConfig.CLIENT_ID,
+                "code" to callback.code,
+                "redirect_uri" to SimklConfig.REDIRECT_URI,
+                "code_verifier" to verifier,
+            ).entries.joinToString("&") { (key, value) ->
+                "${key.encodeURLParameter()}=${value.encodeURLParameter()}"
+            }
             val response = try {
-                SimklApi.client.execute(
-                    SimklApiRequest(
-                        method = SimklHttpMethod.POST,
-                        path = "/oauth/token",
-                        body = json.encodeToString(request),
-                        requiresAuthentication = false,
-                        retryPolicy = SimklRetryPolicy.NEVER,
+                httpRequestRaw(
+                    method = "POST",
+                    url = SIMKL_TOKEN_URL,
+                    headers = mapOf(
+                        "Content-Type" to "application/x-www-form-urlencoded",
+                        "Accept" to "application/json",
+                        "User-Agent" to "${SimklConfig.APP_NAME}/$simklAppVersion",
                     ),
+                    body = formBody,
                 )
             } catch (error: CancellationException) {
                 throw error
@@ -393,15 +401,6 @@ object SimklAuthRepository : TrackingAuthProvider {
 
     private const val TOKEN_EXPIRY_SKEW_MS = 60_000L
 }
-
-@Serializable
-private data class SimklTokenRequest(
-    val code: String,
-    @SerialName("client_id") val clientId: String,
-    @SerialName("code_verifier") val codeVerifier: String,
-    @SerialName("redirect_uri") val redirectUri: String,
-    @SerialName("grant_type") val grantType: String = "authorization_code",
-)
 
 @Serializable
 private data class SimklTokenResponse(
