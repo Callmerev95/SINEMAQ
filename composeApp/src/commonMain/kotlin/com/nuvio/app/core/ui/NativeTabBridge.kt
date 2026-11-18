@@ -2,12 +2,13 @@ package com.nuvio.app.core.ui
 
 import com.nuvio.app.features.profiles.AvatarRepository
 import com.nuvio.app.features.profiles.AvatarCatalogItem
-import com.nuvio.app.features.profiles.MAX_PROFILES
 import com.nuvio.app.features.profiles.NuvioProfile
 import com.nuvio.app.features.profiles.PinVerifyResult
 import com.nuvio.app.features.profiles.ProfileRepository
 import com.nuvio.app.features.profiles.profileAvatarImageUrl
 import com.nuvio.app.features.profiles.showAlreadyActiveProfileToast
+import com.nuvio.app.features.membership.MemberAccessRepository
+import com.nuvio.app.features.membership.profileLimit
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -153,7 +154,7 @@ class NativeProfileSwitcherController {
         return NativeProfileSwitcherState(
             profiles = options,
             isLoaded = profilesLoaded,
-            canAddProfile = profiles.size < MAX_PROFILES,
+            canAddProfile = profiles.size < MemberAccessRepository.access.value.tier.profileLimit(),
         )
     }
 

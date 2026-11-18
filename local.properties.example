@@ -22,6 +22,9 @@ SIMKL_CLIENT_ID=
 SIMKL_REDIRECT_URI=
 SIMKL_APP_NAME=
 MDBLIST_CLIENT_ID=
+
+# Membership upgrade landing page (opened by the profile-limit upgrade prompt)
+UPGRADE_URL=
 PREMIUMIZE_CLIENT_ID=
 INTRODB_API_URL=
 IMDB_RATINGS_API_BASE_URL=

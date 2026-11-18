@@ -44,8 +44,9 @@ import nuvio.composeapp.generated.resources.community_membership_manage
 import nuvio.composeapp.generated.resources.community_membership_refresh
 import nuvio.composeapp.generated.resources.community_membership_refreshing
 import nuvio.composeapp.generated.resources.community_membership_supporter_since
+import nuvio.composeapp.generated.resources.community_membership_tier_free
+import nuvio.composeapp.generated.resources.community_membership_tier_lifetime
 import nuvio.composeapp.generated.resources.community_membership_tier_supporter
-import nuvio.composeapp.generated.resources.community_membership_tier_supporter_plus
 import nuvio.composeapp.generated.resources.community_membership_title
 import nuvio.composeapp.generated.resources.community_membership_thank_you
 import nuvio.composeapp.generated.resources.community_membership_unable_load
@@ -405,8 +406,9 @@ private fun TierTitle(
 
 @Composable
 private fun MemberTier.displayName(): String = when (this) {
+    MemberTier.FREE -> stringResource(Res.string.community_membership_tier_free)
     MemberTier.SUPPORTER -> stringResource(Res.string.community_membership_tier_supporter)
-    MemberTier.SUPPORTER_PLUS -> stringResource(Res.string.community_membership_tier_supporter_plus)
+    MemberTier.LIFETIME -> stringResource(Res.string.community_membership_tier_lifetime)
 }
 
 @Composable

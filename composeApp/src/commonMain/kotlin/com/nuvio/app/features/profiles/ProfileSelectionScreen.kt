@@ -63,6 +63,8 @@ import com.nuvio.app.core.ui.NuvioBackButton
 import com.nuvio.app.core.ui.NuvioToastHost
 import com.nuvio.app.core.ui.LocalVerticalBarPadding
 import com.nuvio.app.features.membership.CosmeticEntitlement
+import com.nuvio.app.features.membership.MemberAccessRepository
+import com.nuvio.app.features.membership.profileLimit
 import com.nuvio.app.features.settings.MemberBrandWordmark
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -82,6 +84,9 @@ fun ProfileSelectionScreen(
 ) {
     val profileState by ProfileRepository.state.collectAsStateWithLifecycle()
     val scope = rememberCoroutineScope()
+    val memberAccess by MemberAccessRepository.access.collectAsStateWithLifecycle()
+    val profileLimit = memberAccess.tier.profileLimit()
+    var showUpgradeDialog by remember { mutableStateOf(false) }
     var pinDialogProfile by remember { mutableStateOf<NuvioProfile?>(null) }
     var isEditMode by remember { mutableStateOf(false) }
 
@@ -125,6 +130,13 @@ fun ProfileSelectionScreen(
             profile = backgroundProfile,
             modifier = Modifier.fillMaxSize(),
         )
+
+        if (showUpgradeDialog) {
+            ProfileLimitUpgradeDialog(
+                currentLimit = profileLimit,
+                onDismiss = { showUpgradeDialog = false },
+            )
+        }
 
         AnimatedVisibility(
             visible = contentVisible,
@@ -176,7 +188,10 @@ fun ProfileSelectionScreen(
                 Spacer(modifier = Modifier.height(if (isTabletLayout) 28.dp else 48.dp))
 
                 val profiles = profileState.profiles
-                val items = profiles.size + if (isEditMode && profiles.size < MAX_PROFILES) 1 else 0
+                val items = profiles.size + if (isEditMode && profiles.size < profileLimit) 1 else 0
+                val onAddClick: () -> Unit = {
+                    if (profiles.size >= profileLimit) showUpgradeDialog = true else onAddProfile()
+                }
 
                 if (isTabletLayout) {
                     Box(
@@ -205,7 +220,7 @@ fun ProfileSelectionScreen(
                                     AddProfileCard(
                                         animDelay = currentIndex * 80,
                                         enabled = interactionEnabled,
-                                        onClick = onAddProfile,
+                                        onClick = onAddClick,
                                     )
                                 }
                             }
@@ -241,7 +256,7 @@ fun ProfileSelectionScreen(
                                             AddProfileCard(
                                                 animDelay = currentIndex * 80,
                                                 enabled = interactionEnabled,
-                                                onClick = onAddProfile,
+                                                onClick = onAddClick,
                                             )
                                         }
                                         index++

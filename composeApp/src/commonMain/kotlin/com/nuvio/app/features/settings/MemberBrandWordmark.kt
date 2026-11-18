@@ -62,13 +62,22 @@ internal fun MemberTier.badgeStyle(): MemberBadgeStyle = when (this) {
         ),
     )
 
-    MemberTier.SUPPORTER_PLUS -> MemberBadgeStyle(
-        label = "Supporter+",
+    MemberTier.LIFETIME -> MemberBadgeStyle(
+        label = "Lifetime",
         colorStops = listOf(
-            0f to Color(0xFF91A8FF),
-            0.52f to Color(0xFFF08BD8),
-            0.78f to Color(0xFFFF9B8E),
-            1f to Color(0xFF91A8FF),
+            0f to Color(0xFFD4843D),
+            0.45f to Color(0xFFFFDE90),
+            0.75f to Color(0xFFB57BFF),
+            1f to Color(0xFF9C6BFF),
+        ),
+    )
+
+    MemberTier.FREE -> MemberBadgeStyle(
+        label = "Free",
+        colorStops = listOf(
+            0f to Color(0xFF7A7F87),
+            0.5f to Color(0xFFB6BAC0),
+            1f to Color(0xFF7A7F87),
         ),
     )
 }

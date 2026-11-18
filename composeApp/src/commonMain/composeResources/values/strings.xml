@@ -1036,6 +1036,12 @@
     <string name="community_membership_refreshing">Refreshing</string>
     <string name="community_membership_unable_load">Unable to load membership status. Please try again.</string>
     <string name="community_membership_tier_supporter">Supporter</string>
+    <string name="community_membership_tier_lifetime">Lifetime</string>
+    <string name="community_membership_tier_free">Free</string>
+    <string name="profile_limit_upgrade_title">Profile limit reached</string>
+    <string name="profile_limit_upgrade_body">You\'ve reached the maximum of %1$d profile(s) on the Free plan. Upgrade to Supporter (5) or Lifetime (6) to add more.</string>
+    <string name="profile_limit_upgrade_cta">Upgrade</string>
+    <string name="profile_limit_upgrade_dismiss">Not now</string>
     <string name="community_membership_tier_supporter_plus">Supporter Plus</string>
     <string name="community_donation_progress_title">This month&apos;s server &amp; maintenance</string>
     <string name="community_donation_progress_complete">Covered. Additional support now goes to development.</string>

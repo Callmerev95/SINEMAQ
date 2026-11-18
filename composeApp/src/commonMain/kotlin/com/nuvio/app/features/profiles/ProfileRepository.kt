@@ -21,6 +21,8 @@ import com.nuvio.app.core.ui.PosterCardStyleRepository
 import com.nuvio.app.features.library.LibraryRepository
 import com.nuvio.app.features.library.LibraryDisplaySettingsRepository
 import com.nuvio.app.features.mdblist.MdbListSettingsRepository
+import com.nuvio.app.features.membership.MemberAccessRepository
+import com.nuvio.app.features.membership.profileLimit
 import com.nuvio.app.features.notifications.EpisodeReleaseNotificationsRepository
 import com.nuvio.app.features.p2p.P2pSettingsRepository
 import com.nuvio.app.features.player.PlayerSettingsRepository
@@ -201,8 +203,9 @@ object ProfileRepository {
             return
         }
         try {
+            val tierLimit = MemberAccessRepository.access.value.tier.profileLimit()
             val params = buildJsonObject {
-                put("p_client_max_profiles", MAX_PROFILES)
+                put("p_client_max_profiles", tierLimit)
                 put("p_profiles", json.encodeToJsonElement(profiles))
                 putSyncOriginClientId()
             }
@@ -222,7 +225,8 @@ object ProfileRepository {
         usesPrimaryAddons: Boolean = false,
     ) {
         val existing = _state.value.profiles
-        val nextIndex = ((1..MAX_PROFILES).toSet() - existing.map { it.profileIndex }.toSet()).minOrNull() ?: return
+        val tierLimit = MemberAccessRepository.access.value.tier.profileLimit()
+        val nextIndex = ((1..tierLimit).toSet() - existing.map { it.profileIndex }.toSet()).minOrNull() ?: return
 
         val allPayloads = existing.map { profile ->
             ProfilePushPayload(

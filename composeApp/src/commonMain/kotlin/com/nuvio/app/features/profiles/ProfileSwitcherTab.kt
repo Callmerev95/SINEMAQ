@@ -74,6 +74,8 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil3.compose.AsyncImage
 import com.nuvio.app.core.ui.NuvioTokens
 import com.nuvio.app.core.ui.nuvio
+import com.nuvio.app.features.membership.MemberAccessRepository
+import com.nuvio.app.features.membership.profileLimit
 import dev.chrisbanes.haze.HazeState
 import com.nuvio.app.isIos
 import kotlinx.coroutines.delay
@@ -99,6 +101,9 @@ fun ProfileSwitcherTab(
     val activeProfile = profileState.activeProfile
     val profiles = profileState.profiles
     val avatars by AvatarRepository.avatars.collectAsStateWithLifecycle()
+    val memberAccess by MemberAccessRepository.access.collectAsStateWithLifecycle()
+    val profileLimit = memberAccess.tier.profileLimit()
+    var showUpgradeDialog by remember { mutableStateOf(false) }
 
     LaunchedEffect(Unit) {
         AvatarRepository.refreshAvatars()
@@ -288,7 +293,11 @@ fun ProfileSwitcherTab(
                     onProfileSelected = ::chooseProfile,
                     onAddProfileRequested = {
                         showPopup = false
-                        onAddProfileRequested()
+                        if (profiles.size >= profileLimit) {
+                            showUpgradeDialog = true
+                        } else {
+                            onAddProfileRequested()
+                        }
                     },
                     onPinCancelled = { pinProfile = null },
                     onPinVerified = { profile ->
@@ -302,6 +311,13 @@ fun ProfileSwitcherTab(
                     },
                 )
             }
+        }
+
+        if (showUpgradeDialog) {
+            ProfileLimitUpgradeDialog(
+                currentLimit = profileLimit,
+                onDismiss = { showUpgradeDialog = false },
+            )
         }
     }
 }
@@ -320,6 +336,9 @@ fun NativeProfileSwitcherPopup(
     val activeProfile = profileState.activeProfile
     val profiles = profileState.profiles
     val avatars by AvatarRepository.avatars.collectAsStateWithLifecycle()
+    val memberAccess by MemberAccessRepository.access.collectAsStateWithLifecycle()
+    val profileLimit = memberAccess.tier.profileLimit()
+    var showUpgradeDialog by remember { mutableStateOf(false) }
     val tokens = MaterialTheme.nuvio
     val haptic = LocalHapticFeedback.current
     val density = LocalDensity.current
@@ -454,16 +473,18 @@ fun NativeProfileSwitcherPopup(
                                     )
                                 }
 
-                                if (profiles.size < MAX_PROFILES) {
-                                    PopupAddProfileBubble(
-                                        delayMs = profiles.size * 50,
-                                        onClick = {
-                                            showPopup = false
-                                            onDismissRequest()
+                                PopupAddProfileBubble(
+                                    delayMs = profiles.size * 50,
+                                    onClick = {
+                                        showPopup = false
+                                        onDismissRequest()
+                                        if (profiles.size >= profileLimit) {
+                                            showUpgradeDialog = true
+                                        } else {
                                             onAddProfileRequested()
-                                        },
-                                    )
-                                }
+                                        }
+                                    },
+                                )
                             }
 
                             AnimatedVisibility(
@@ -497,6 +518,13 @@ fun NativeProfileSwitcherPopup(
                     }
                 }
             }
+        }
+
+        if (showUpgradeDialog) {
+            ProfileLimitUpgradeDialog(
+                currentLimit = profileLimit,
+                onDismiss = { showUpgradeDialog = false },
+            )
         }
     }
 }

@@ -22,16 +22,31 @@ class MemberBrandWordmarkTest {
     }
 
     @Test
-    fun supporterPlusBadgeMatchesWebsiteCoolGradient() {
-        val style = MemberTier.SUPPORTER_PLUS.badgeStyle()
+    fun lifetimeBadgeMatchesGoldToPurpleGradient() {
+        val style = MemberTier.LIFETIME.badgeStyle()
 
-        assertEquals("Supporter+", style.label)
+        assertEquals("Lifetime", style.label)
         assertEquals(
             listOf(
-                0f to Color(0xFF91A8FF),
-                0.52f to Color(0xFFF08BD8),
-                0.78f to Color(0xFFFF9B8E),
-                1f to Color(0xFF91A8FF),
+                0f to Color(0xFFD4843D),
+                0.45f to Color(0xFFFFDE90),
+                0.75f to Color(0xFFB57BFF),
+                1f to Color(0xFF9C6BFF),
+            ),
+            style.colorStops,
+        )
+    }
+
+    @Test
+    fun freeBadgeMatchesNeutralGrayGradient() {
+        val style = MemberTier.FREE.badgeStyle()
+
+        assertEquals("Free", style.label)
+        assertEquals(
+            listOf(
+                0f to Color(0xFF7A7F87),
+                0.5f to Color(0xFFB6BAC0),
+                1f to Color(0xFF7A7F87),
             ),
             style.colorStops,
         )

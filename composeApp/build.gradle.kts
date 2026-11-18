@@ -202,6 +202,7 @@ abstract class GenerateRuntimeConfigsTask : DefaultTask() {
                 |    const val SUPPORTERS_WALL_URL = "${props.getProperty("SUPPORTERS_WALL_URL", "")}"
                 |    const val DONATIONS_BASE_URL = "${props.getProperty("DONATIONS_BASE_URL", "")}" 
                 |    const val DONATIONS_DONATE_URL = "${props.getProperty("DONATIONS_DONATE_URL", "")}" 
+                |    const val UPGRADE_URL = "${props.getProperty("UPGRADE_URL", "")}" 
                 |}
                 """.trimMargin()
             )

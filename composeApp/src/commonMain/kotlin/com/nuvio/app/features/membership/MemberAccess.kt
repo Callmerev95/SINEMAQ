@@ -1,8 +1,15 @@
 package com.nuvio.app.features.membership
 
 enum class MemberTier {
+    FREE,
     SUPPORTER,
-    SUPPORTER_PLUS,
+    LIFETIME,
+}
+
+fun MemberTier?.profileLimit(): Int = when (this) {
+    MemberTier.LIFETIME -> 6
+    MemberTier.SUPPORTER -> 5
+    else -> 3
 }
 
 enum class CosmeticEntitlement {
