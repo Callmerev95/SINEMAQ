@@ -33,6 +33,8 @@ import com.nuvio.app.core.ui.NuvioStatusModal
 import com.nuvio.app.core.ui.NuvioSurfaceCard
 import com.nuvio.app.core.ui.NuvioTokens
 import com.nuvio.app.core.ui.nuvio
+import com.nuvio.app.features.membership.MemberAccessRepository
+import com.nuvio.app.features.membership.MemberTier
 import kotlinx.coroutines.launch
 import nuvio.composeapp.generated.resources.Res
 import nuvio.composeapp.generated.resources.action_cancel
@@ -43,6 +45,7 @@ import nuvio.composeapp.generated.resources.settings_account_delete_account_desc
 import nuvio.composeapp.generated.resources.settings_account_delete_confirm_message
 import nuvio.composeapp.generated.resources.settings_account_delete_confirm_title
 import nuvio.composeapp.generated.resources.settings_account_email
+import nuvio.composeapp.generated.resources.settings_account_membership
 import nuvio.composeapp.generated.resources.settings_account_not_signed_in
 import nuvio.composeapp.generated.resources.settings_account_sign_out
 import nuvio.composeapp.generated.resources.settings_account_sign_out_confirm_message
@@ -85,6 +88,16 @@ private fun AccountSettingsBody(
 
             when (val state = authState) {
                 is AuthState.Authenticated -> {
+                    if (!state.isAnonymous) {
+                        val memberAccess by MemberAccessRepository.access.collectAsStateWithLifecycle()
+                        memberAccess.tier?.let { tier ->
+                            AccountBadgeRow(
+                                label = stringResource(Res.string.settings_account_membership),
+                                tier = tier,
+                            )
+                            Spacer(modifier = Modifier.height(8.dp))
+                        }
+                    }
                     AccountInfoRow(
                         label = stringResource(Res.string.settings_account_status),
                         value = if (state.isAnonymous) {
@@ -248,5 +261,33 @@ private fun AccountInfoRow(
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
         )
+    }
+}
+
+@Composable
+private fun AccountBadgeRow(
+    label: String,
+    tier: MemberTier,
+) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(16.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(
+            text = label,
+            style = MaterialTheme.typography.bodyLarge,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        Row(
+            modifier = Modifier.weight(1f),
+            horizontalArrangement = Arrangement.End,
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            MemberTierBadge(
+                tier = tier,
+                fontSize = MaterialTheme.typography.bodyLarge.fontSize,
+            )
+        }
     }
 }

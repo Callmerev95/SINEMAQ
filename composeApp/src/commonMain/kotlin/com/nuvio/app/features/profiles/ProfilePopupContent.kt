@@ -56,10 +56,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.nuvio.app.core.ui.nuvio
-import com.nuvio.app.features.membership.MemberAccessRepository
-import com.nuvio.app.features.membership.profileLimit
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.HazeTint
 import dev.chrisbanes.haze.hazeEffect
@@ -89,9 +86,7 @@ internal fun ProfilePopupContent(
     val panelAlignment = if (opensBelow) Alignment.TopCenter else Alignment.BottomCenter
     val dismissPopup by rememberUpdatedState(onDismissRequest)
     var panelBounds by remember { mutableStateOf(Rect.Zero) }
-    val memberAccess by MemberAccessRepository.access.collectAsStateWithLifecycle()
-    val profileLimit = memberAccess.tier.profileLimit()
-    val items: List<NuvioProfile?> = if (profiles.size < profileLimit) profiles + listOf(null) else profiles
+    val items: List<NuvioProfile?> = profiles + listOf(null)
     BoxWithConstraints(modifier.widthIn(max = 336.dp)) {
         val availableWidth = (maxWidth - 32.dp).coerceAtLeast(0.dp)
         val preferredColumns = if (items.size == 4) 2 else items.size.coerceAtMost(3)

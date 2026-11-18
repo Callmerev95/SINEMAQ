@@ -663,6 +663,7 @@
     <string name="settings_account_delete_confirm_title">Delete Account?</string>
     <string name="settings_account_email">Email</string>
     <string name="settings_account_not_signed_in">Not signed in</string>
+    <string name="settings_account_membership">Membership</string>
     <string name="settings_account_sign_out">Sign Out</string>
     <string name="settings_account_sign_out_confirm_message">You will be returned to the login screen.</string>
     <string name="settings_account_sign_out_confirm_title">Sign Out?</string>

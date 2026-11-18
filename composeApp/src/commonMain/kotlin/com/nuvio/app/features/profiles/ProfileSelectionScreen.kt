@@ -188,7 +188,7 @@ fun ProfileSelectionScreen(
                 Spacer(modifier = Modifier.height(if (isTabletLayout) 28.dp else 48.dp))
 
                 val profiles = profileState.profiles
-                val items = profiles.size + if (isEditMode && profiles.size < profileLimit) 1 else 0
+                val items = profiles.size + if (isEditMode) 1 else 0
                 val onAddClick: () -> Unit = {
                     if (profiles.size >= profileLimit) showUpgradeDialog = true else onAddProfile()
                 }

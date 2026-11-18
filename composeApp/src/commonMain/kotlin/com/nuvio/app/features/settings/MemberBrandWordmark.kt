@@ -32,6 +32,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntSize
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.nuvio.app.features.membership.MemberAccessRepository
@@ -116,6 +117,29 @@ internal fun MemberBrandWordmark(
             }
         }
     }
+}
+
+@Composable
+internal fun MemberTierBadge(
+    tier: MemberTier,
+    modifier: Modifier = Modifier,
+    fontSize: TextUnit = 16.sp,
+) {
+    val badgeStyle = remember(tier) { tier.badgeStyle() }
+    var badgeSize by remember(tier) { mutableStateOf(IntSize.Zero) }
+    val gradientBrush = rememberMemberBadgeGradientBrush(
+        style = badgeStyle,
+        size = badgeSize,
+    )
+    Text(
+        text = badgeStyle.label,
+        style = TextStyle(
+            brush = gradientBrush,
+            fontSize = fontSize,
+            fontWeight = FontWeight.SemiBold,
+        ),
+        modifier = modifier.onSizeChanged { badgeSize = it },
+    )
 }
 
 @Composable
