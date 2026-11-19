@@ -40,6 +40,12 @@ iosApp/Configuration/DeviceSigning.local.json
 
 # Avatar catalog seed assets (live in Supabase Storage, not the repo)
 sinemaq-avatar/
+free-avatars/
+supporter-avatars/
+lifetime-avatars/
+profile-background-assets/
+profile-background-assets-landscape/
+profile-background-assets-landscape-webp/
 *.webp
 avatars.csv
 avatars.json
