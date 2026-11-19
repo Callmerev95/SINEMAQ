@@ -355,7 +355,7 @@
     <string name="compose_auth_link_code_expired">এই কোডের মেয়াদ শেষ।</string>
     <string name="compose_auth_link_creating_code">কোড তৈরি করা হচ্ছে…</string>
     <string name="compose_auth_link_failed">লিঙ্ক সাইন ইন ব্যর্থ হয়েছে।</string>
-    <string name="compose_auth_link_open">nuvio.tv/link খুলুন</string>
+    <string name="compose_auth_link_open">সাইন-ইন লিংক খুলুন</string>
     <string name="compose_auth_link_open_failed">লিঙ্কটি খোলা যায়নি।</string>
     <string name="compose_auth_link_sign_in">লিঙ্ক দিয়ে সাইন ইন করুন</string>
     <string name="compose_auth_link_signing_in">সাইন ইন করা হচ্ছে…</string>
@@ -373,7 +373,7 @@
     <string name="compose_auth_terms_link">শর্তাবলী</string>
     <string name="compose_auth_welcome_back">আবার স্বাগতম</string>
     <string name="server_menu_content_description">সার্ভার অপশন</string>
-    <string name="server_menu_official">অফিসিয়াল সার্ভার ব্যবহার করুন</string>
+    <string name="server_menu_official">SINEMAQ সার্ভার ব্যবহার করুন</string>
     <string name="server_menu_custom">কাস্টম সার্ভারের সাথে সংযোগ করুন</string>
     <string name="server_menu_change_custom">অন্য সার্ভারের সাথে সংযোগ করুন</string>
     <string name="server_connect_title">কাস্টম সার্ভারের সাথে সংযোগ করুন</string>
@@ -393,13 +393,13 @@
     <string name="server_warning_private">এটি একটি প্রাইভেট-নেটওয়ার্ক সার্ভার মনে হলেও, কে এটি নিয়ন্ত্রণ করছে তা অ্যাপটি যাচাই করতে পারে না।</string>
     <string name="server_warning_credentials">সার্ভার অপারেটর আপনার অ্যাকাউন্টের লগইন তথ্য পেতে পারে এবং এই সার্ভারের মাধ্যমে সিঙ্ক করা ডেটা অ্যাক্সেস করতে পারে।</string>
     <string name="server_review_trust">আমি এই সার্ভারকে বিশ্বাস করি</string>
-    <string name="server_official_title">অফিসিয়াল সার্ভার ব্যবহার করবেন?</string>
-    <string name="server_official_body">আপনি কাস্টম সার্ভার থেকে সাইন আউট হয়ে যাবেন এবং অ্যাপটি অফিসিয়াল পরিষেবার সাথে আবার চালু হবে।</string>
-    <string name="server_official_action">অফিসিয়াল সার্ভার ব্যবহার করুন</string>
+    <string name="server_official_title">SINEMAQ সার্ভার ব্যবহার করবেন?</string>
+    <string name="server_official_body">আপনি কাস্টম সার্ভার থেকে সাইন আউট হয়ে যাবেন এবং অ্যাপটি SINEMAQ পরিষেবার সাথে আবার চালু হবে।</string>
+    <string name="server_official_action">SINEMAQ সার্ভার ব্যবহার করুন</string>
     <string name="server_switching">পরিবর্তন করা হচ্ছে…</string>
     <string name="server_error_invalid_url">একটি বৈধ HTTP বা HTTPS ব্যাকএন্ড URL লিখুন।</string>
-    <string name="server_error_official_active">api.nuvio.tv অফিসিয়াল সার্ভার এবং ইতিমধ্যেই নির্বাচিত।</string>
-    <string name="server_error_official_available">api.nuvio.tv হলো অফিসিয়াল সার্ভার। ফিরে যেতে এই ডায়ালগটি বন্ধ করুন এবং 'অফিসিয়াল সার্ভার ব্যবহার করুন' বেছে নিন।</string>
+    <string name="server_error_official_active">SINEMAQ অফিসিয়াল সার্ভার এবং ইতিমধ্যেই নির্বাচিত।</string>
+    <string name="server_error_official_available">SINEMAQ হলো অফিসিয়াল সার্ভার। ফিরে যেতে এই ডায়ালগটি বন্ধ করুন এবং 'SINEMAQ সার্ভার ব্যবহার করুন' বেছে নিন।</string>
     <string name="server_error_connection">ডিসকভারি এন্ডপয়েন্টে পৌঁছানো যায়নি। URL এবং সার্ভারের প্রাপ্যতা যাচাই করুন।</string>
     <string name="server_error_http">ডিসকভারি এন্ডপয়েন্ট HTTP %1$d কোড ফেরত দিয়েছে।</string>
     <string name="server_error_response_too_large">ডিসকভারি ডকুমেন্টটি অনুমোদিত আকারের চেয়ে বড়।</string>

@@ -354,7 +354,7 @@
     <string name="compose_auth_link_code_expired">Este código expirou.</string>
     <string name="compose_auth_link_creating_code">Criando código…</string>
     <string name="compose_auth_link_failed">Falha ao entrar com link.</string>
-    <string name="compose_auth_link_open">Abrir nuvio.tv/link</string>
+    <string name="compose_auth_link_open">Abrir link de login</string>
     <string name="compose_auth_link_open_failed">Não foi possível abrir o link.</string>
     <string name="compose_auth_link_sign_in">Entrar com link</string>
     <string name="compose_auth_link_signing_in">Entrando…</string>
@@ -372,7 +372,7 @@
     <string name="compose_auth_terms_link">Termos</string>
     <string name="compose_auth_welcome_back">Bem-vindo de Volta</string>
     <string name="server_menu_content_description">Opções do servidor</string>
-    <string name="server_menu_official">Usar servidor oficial</string>
+    <string name="server_menu_official">Usar servidor SINEMAQ</string>
     <string name="server_menu_custom">Conectar a servidor personalizado</string>
     <string name="server_menu_change_custom">Conectar a outro servidor</string>
     <string name="server_connect_title">Conectar a servidor personalizado</string>
@@ -392,13 +392,13 @@
     <string name="server_warning_private">Este parece ser um servidor de rede privada, mas o app ainda não pode verificar quem o controla.</string>
     <string name="server_warning_credentials">O operador do servidor pode receber as credenciais da sua conta e acessar os dados sincronizados por meio deste servidor.</string>
     <string name="server_review_trust">Eu confio neste servidor</string>
-    <string name="server_official_title">Usar servidor oficial?</string>
-    <string name="server_official_body">Você será desconectado do servidor personalizado e o app será reiniciado com o serviço oficial.</string>
-    <string name="server_official_action">Usar servidor oficial</string>
+    <string name="server_official_title">Usar servidor SINEMAQ?</string>
+    <string name="server_official_body">Você será desconectado do servidor personalizado e o app será reiniciado com o serviço SINEMAQ.</string>
+    <string name="server_official_action">Usar servidor SINEMAQ</string>
     <string name="server_switching">Alternando…</string>
     <string name="server_error_invalid_url">Insira uma URL de backend HTTP ou HTTPS válida.</string>
-    <string name="server_error_official_active">api.nuvio.tv é o servidor oficial e já está selecionado.</string>
-    <string name="server_error_official_available">api.nuvio.tv é o servidor oficial. Feche este diálogo e escolha Usar servidor oficial para retornar.</string>
+    <string name="server_error_official_active">SINEMAQ é o servidor oficial e já está selecionado.</string>
+    <string name="server_error_official_available">SINEMAQ é o servidor oficial. Feche este diálogo e escolha Usar servidor SINEMAQ para retornar.</string>
     <string name="server_error_connection">Não foi possível alcançar o endpoint de descoberta. Verifique a URL e a disponibilidade do servidor.</string>
     <string name="server_error_http">O endpoint de descoberta retornou HTTP %1$d.</string>
     <string name="server_error_response_too_large">O documento de descoberta é maior do que o permitido.</string>

@@ -508,7 +508,7 @@
     <string name="compose_auth_link_code_expired">Denne koden er utløpt.</string>
     <string name="compose_auth_link_creating_code">Oppretter kode…</string>
     <string name="compose_auth_link_failed">Innlogging med lenke mislyktes.</string>
-    <string name="compose_auth_link_open">Åpne nuvio.tv/link</string>
+    <string name="compose_auth_link_open">Åpne påloggingslenke</string>
     <string name="compose_auth_link_open_failed">Kunne ikke åpne lenken.</string>
     <string name="compose_auth_link_sign_in">Logg inn med lenke</string>
     <string name="compose_auth_link_signing_in">Logger inn…</string>
@@ -1269,8 +1269,8 @@ Du bruker denne funksjonen helt på eget ansvar. P2P kan deaktiveres når som he
     <string name="server_error_invalid_url">Skriv inn en gyldig HTTP- eller HTTPS Backend-URL.</string>
     <string name="server_error_missing_configuration">Discovery-dokumentet mangler en gyldig Backend-URL eller publishable key.</string>
     <string name="server_error_not_self_hosted">Discovery-dokumentet identifiserer ikke en selvhostet server.</string>
-    <string name="server_error_official_active">api.nuvio.tv er den offisielle serveren og er allerede valgt.</string>
-    <string name="server_error_official_available">api.nuvio.tv er den offisielle serveren. Lukk denne dialogen og velg Bruk offisiell server for å bytte tilbake.</string>
+    <string name="server_error_official_active">SINEMAQ er den offisielle serveren og er allerede valgt.</string>
+    <string name="server_error_official_available">SINEMAQ er den offisielle serveren. Lukk denne dialogen og velg Bruk SINEMAQ-server for å bytte tilbake.</string>
     <string name="server_error_response_too_large">Discovery-dokumentet er større enn tillatt.</string>
     <string name="server_error_restart">Serveren ble lagret, men appen kunne ikke starte på nytt automatisk. Start den på nytt manuelt.</string>
     <string name="server_error_save">Kunne ikke lagre serverkonfigurasjonen.</string>
@@ -1280,10 +1280,10 @@ Du bruker denne funksjonen helt på eget ansvar. P2P kan deaktiveres når som he
     <string name="server_menu_change_custom">Koble til en annen server</string>
     <string name="server_menu_content_description">Serveralternativer</string>
     <string name="server_menu_custom">Koble til egendefinert server</string>
-    <string name="server_menu_official">Bruk offisiell server</string>
-    <string name="server_official_action">Bruk offisiell server</string>
-    <string name="server_official_body">Du blir logget ut av den egendefinerte serveren, og appen starter på nytt med den offisielle tjenesten.</string>
-    <string name="server_official_title">Bruke offisiell server?</string>
+    <string name="server_menu_official">Bruk SINEMAQ-server</string>
+    <string name="server_official_action">Bruk SINEMAQ-server</string>
+    <string name="server_official_body">Du blir logget ut av den egendefinerte serveren, og appen starter på nytt med SINEMAQ-tjenesten.</string>
+    <string name="server_official_title">Bruke SINEMAQ-server?</string>
     <string name="server_review_description">Discovery-dokumentet er gyldig. Tilkobling logger deg ut av gjeldende server og starter appen på nytt. Bekreft at dette er en server du eier eller stoler på.</string>
     <string name="server_review_key_discovered">Publishable key oppdaget automatisk</string>
     <string name="server_review_key_label">Klientkonfigurasjon</string>

@@ -349,7 +349,7 @@
     <string name="compose_auth_link_code_expired">Срок действия этого кода истек.</string>
     <string name="compose_auth_link_creating_code">Создание кода…</string>
     <string name="compose_auth_link_failed">Не удалось войти по ссылке.</string>
-    <string name="compose_auth_link_open">Открыть nuvio.tv/link</string>
+    <string name="compose_auth_link_open">Открыть ссылку для входа</string>
     <string name="compose_auth_link_open_failed">Не удалось открыть ссылку.</string>
     <string name="compose_auth_link_sign_in">Войти по ссылке</string>
     <string name="compose_auth_link_signing_in">Вход в систему…</string>
@@ -367,7 +367,7 @@
     <string name="compose_auth_terms_link">Условия</string>
     <string name="compose_auth_welcome_back">Добро пожаловать обратно</string>
     <string name="server_menu_content_description">Опции сервера</string>
-    <string name="server_menu_official">Используйте официальный сервер</string>
+    <string name="server_menu_official">Использовать сервер SINEMAQ</string>
     <string name="server_menu_custom">Подключиться к пользовательскому серверу</string>
     <string name="server_menu_change_custom">Подключиться к другому серверу</string>
     <string name="server_connect_title">Подключиться к пользовательскому серверу</string>
@@ -387,13 +387,13 @@
     <string name="server_warning_private">Похоже, это сервер частной сети, но приложение по-прежнему не может проверить, кто им управляет.</string>
     <string name="server_warning_credentials">Оператор сервера может получить учетные данные вашей учетной записи и получить доступ к данным, которые вы синхронизируете через этот сервер.</string>
     <string name="server_review_trust">Я доверяю этому серверу</string>
-    <string name="server_official_title">Использовать официальный сервер?</string>
-    <string name="server_official_body">Вы выйдете из пользовательского сервера, и приложение перезапустится с официальной службой.</string>
-    <string name="server_official_action">Используйте официальный сервер</string>
+    <string name="server_official_title">Использовать сервер SINEMAQ?</string>
+    <string name="server_official_body">Вы выйдете из пользовательского сервера, и приложение перезапустится со службой SINEMAQ.</string>
+    <string name="server_official_action">Использовать сервер SINEMAQ</string>
     <string name="server_switching">Переключение…</string>
     <string name="server_error_invalid_url">Введите действительный HTTP или HTTPS Backend URL.</string>
-    <string name="server_error_official_active">api.nuvio.tv является официальным сервером и уже выбран.</string>
-    <string name="server_error_official_available">api.nuvio.tv — официальный сервер. Закройте это диалоговое окно и выберите «Использовать официальный сервер», чтобы вернуться обратно.</string>
+    <string name="server_error_official_active">SINEMAQ — официальный сервер, и он уже выбран.</string>
+    <string name="server_error_official_available">SINEMAQ — официальный сервер. Закройте это диалоговое окно и выберите «Использовать сервер SINEMAQ», чтобы вернуться.</string>
     <string name="server_error_connection">Не удалось достичь конечной точки обнаружения. Проверьте URL и доступность сервера.</string>
     <string name="server_error_http">Конечная точка обнаружения вернула HTTP %1$d.</string>
     <string name="server_error_response_too_large">Размер документа обнаружения превышает допустимый.</string>

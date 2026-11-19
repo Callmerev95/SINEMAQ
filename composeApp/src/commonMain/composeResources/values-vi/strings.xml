@@ -354,7 +354,7 @@
     <string name="compose_auth_link_code_expired">Mã này đã hết hạn.</string>
     <string name="compose_auth_link_creating_code">Đang tạo mã…</string>
     <string name="compose_auth_link_failed">Đăng nhập bằng liên kết không thành công.</string>
-    <string name="compose_auth_link_open">Mở nuvio.tv/link</string>
+    <string name="compose_auth_link_open">Mở liên kết đăng nhập</string>
     <string name="compose_auth_link_open_failed">Không thể mở liên kết.</string>
     <string name="compose_auth_link_sign_in">Đăng nhập bằng liên kết</string>
     <string name="compose_auth_link_signing_in">Đang đăng nhập…</string>
@@ -372,7 +372,7 @@
     <string name="compose_auth_terms_link">Điều khoản sử dụng</string>
     <string name="compose_auth_welcome_back">Chào mừng trở lại</string>
     <string name="server_menu_content_description">Tùy chọn máy chủ</string>
-    <string name="server_menu_official">Sử dụng máy chủ chính thức</string>
+    <string name="server_menu_official">Dùng máy chủ SINEMAQ</string>
     <string name="server_menu_custom">Kết nối với máy chủ tùy chỉnh</string>
     <string name="server_menu_change_custom">Kết nối với máy chủ khác</string>
     <string name="server_connect_title">Kết nối với máy chủ tùy chỉnh</string>
@@ -392,13 +392,13 @@
     <string name="server_warning_private">Đây có vẻ là máy chủ mạng nội bộ, nhưng ứng dụng vẫn không thể xác minh ai đang kiểm soát máy chủ này.</string>
     <string name="server_warning_credentials">Nhà vận hành máy chủ có thể nhận thông tin đăng nhập tài khoản của bạn và truy cập dữ liệu bạn đồng bộ qua máy chủ này.</string>
     <string name="server_review_trust">Tôi tin cậy máy chủ này</string>
-    <string name="server_official_title">Sử dụng máy chủ chính thức?</string>
-    <string name="server_official_body">Bạn sẽ bị đăng xuất khỏi máy chủ tùy chỉnh và ứng dụng sẽ khởi động lại với dịch vụ chính thức.</string>
-    <string name="server_official_action">Sử dụng máy chủ chính thức</string>
+    <string name="server_official_title">Dùng máy chủ SINEMAQ?</string>
+    <string name="server_official_body">Bạn sẽ bị đăng xuất khỏi máy chủ tùy chỉnh và ứng dụng sẽ khởi động lại với dịch vụ SINEMAQ.</string>
+    <string name="server_official_action">Dùng máy chủ SINEMAQ</string>
     <string name="server_switching">Đang chuyển…</string>
     <string name="server_error_invalid_url">Nhập URL Backend HTTP hoặc HTTPS hợp lệ.</string>
-    <string name="server_error_official_active">api.nuvio.tv là máy chủ chính thức và đã được chọn.</string>
-    <string name="server_error_official_available">api.nuvio.tv là máy chủ chính thức. Vui lòng đóng hộp thoại này và chọn “Sử dụng máy chủ chính thức” để chuyển trở lại.</string>
+    <string name="server_error_official_active">SINEMAQ là máy chủ chính thức và đã được chọn.</string>
+    <string name="server_error_official_available">SINEMAQ là máy chủ chính thức. Vui lòng đóng hộp thoại này và chọn “Dùng máy chủ SINEMAQ” để chuyển trở lại.</string>
     <string name="server_error_connection">Không thể tiếp cận điểm cuối phát hiện. Vui lòng kiểm tra lại URL và trạng thái hoạt động của máy chủ.</string>
     <string name="server_error_http">Điểm cuối phát hiện đã trả về HTTP %1$d.</string>
     <string name="server_error_response_too_large">Tài liệu khám phá có kích thước vượt quá giới hạn cho phép.</string>

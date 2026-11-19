@@ -354,7 +354,7 @@
     <string name="compose_auth_link_code_expired">Deze code is verlopen.</string>
     <string name="compose_auth_link_creating_code">Code aanmaken...</string>
     <string name="compose_auth_link_failed">Inloggen via link is mislukt.</string>
-    <string name="compose_auth_link_open">nuvio.tv/link openen</string>
+    <string name="compose_auth_link_open">Aanmeldlink openen</string>
     <string name="compose_auth_link_open_failed">Kon de link niet openen.</string>
     <string name="compose_auth_link_sign_in">Inloggen met link</string>
     <string name="compose_auth_link_signing_in">Bezig met inloggen...</string>
@@ -372,7 +372,7 @@
     <string name="compose_auth_terms_link">Voorwaarden</string>
     <string name="compose_auth_welcome_back">Welkom terug</string>
     <string name="server_menu_content_description">Serveropties</string>
-    <string name="server_menu_official">Officiële server gebruiken</string>
+    <string name="server_menu_official">SINEMAQ-server gebruiken</string>
     <string name="server_menu_custom">Verbinden met eigen server</string>
     <string name="server_menu_change_custom">Verbinden met een andere server</string>
     <string name="server_connect_title">Verbinden met eigen server</string>
@@ -392,13 +392,13 @@
     <string name="server_warning_private">Dit lijkt een server in een privénetwerk te zijn, maar de app kan nog steeds niet controleren wie er de controle over heeft.</string>
     <string name="server_warning_credentials">De serverbeheerder kan je accountgegevens ontvangen en toegang krijgen tot gegevens die je via deze server synchroniseert.</string>
     <string name="server_review_trust">Ik vertrouw deze server</string>
-    <string name="server_official_title">Officiële server gebruiken?</string>
-    <string name="server_official_body">Je wordt afgemeld bij de eigen server en de app start opnieuw op met de officiële service.</string>
-    <string name="server_official_action">Officiële server gebruiken</string>
+    <string name="server_official_title">SINEMAQ-server gebruiken?</string>
+    <string name="server_official_body">Je wordt afgemeld bij de eigen server en de app start opnieuw op met de SINEMAQ-service.</string>
+    <string name="server_official_action">SINEMAQ-server gebruiken</string>
     <string name="server_switching">Overschakelen...</string>
     <string name="server_error_invalid_url">Voer een geldige HTTP- of HTTPS-backend-URL in.</string>
-    <string name="server_error_official_active">api.nuvio.tv is de officiële server en is al geselecteerd.</string>
-    <string name="server_error_official_available">api.nuvio.tv is de officiële server. Sluit dit venster en kies Officiële server gebruiken om terug te schakelen.</string>
+    <string name="server_error_official_active">SINEMAQ is de officiële server en is al geselecteerd.</string>
+    <string name="server_error_official_available">SINEMAQ is de officiële server. Sluit dit venster en kies SINEMAQ-server gebruiken om terug te schakelen.</string>
     <string name="server_error_connection">Kon het discovery-eindpunt niet bereiken. Controleer de URL en of de server beschikbaar is.</string>
     <string name="server_error_http">Het discovery-eindpunt gaf HTTP %1$d terug.</string>
     <string name="server_error_response_too_large">Het discovery-document is groter dan toegestaan.</string>

@@ -139,7 +139,7 @@
     <string name="compose_auth_link_code_expired">Αυτός ο κωδικός έληξε.</string>
     <string name="compose_auth_link_creating_code">Δημιουργία κωδικού…</string>
     <string name="compose_auth_link_failed">Η σύνδεση μέσω συνδέσμου απέτυχε.</string>
-    <string name="compose_auth_link_open">Άνοιγμα nuvio.tv/link</string>
+    <string name="compose_auth_link_open">Άνοιγμα συνδέσμου σύνδεσης</string>
     <string name="compose_auth_link_open_failed">Δεν ήταν δυνατό το άνοιγμα του συνδέσμου.</string>
     <string name="compose_auth_link_sign_in">Σύνδεση με σύνδεσμο</string>
     <string name="compose_auth_link_signing_in">Γίνεται σύνδεση…</string>
@@ -155,7 +155,7 @@
     <string name="compose_auth_tagline">Δείτε τη βιβλιοθήκη σας, παντού</string>
     <string name="compose_auth_welcome_back">Καλώς ορίσατε ξανά</string>
     <string name="server_menu_content_description">Επιλογές διακομιστή</string>
-    <string name="server_menu_official">Χρήση επίσημου διακομιστή</string>
+    <string name="server_menu_official">Χρήση διακομιστή SINEMAQ</string>
     <string name="server_menu_custom">Σύνδεση σε προσαρμοσμένο διακομιστή</string>
     <string name="server_menu_change_custom">Σύνδεση σε άλλο διακομιστή</string>
     <string name="server_connect_title">Σύνδεση σε προσαρμοσμένο διακομιστή</string>
@@ -175,13 +175,13 @@
     <string name="server_warning_private">Αυτός φαίνεται να είναι διακομιστής ιδιωτικού δικτύου, αλλά η εφαρμογή εξακολουθεί να μην μπορεί να επαληθεύσει ποιος τον ελέγχει.</string>
     <string name="server_warning_credentials">Ο διαχειριστής του διακομιστή μπορεί να λάβει τα διαπιστευτήρια του λογαριασμού σας και να έχει πρόσβαση στα δεδομένα που συγχρονίζετε μέσω αυτού του διακομιστή.</string>
     <string name="server_review_trust">Εμπιστεύομαι αυτόν τον διακομιστή</string>
-    <string name="server_official_title">Χρήση επίσημου διακομιστή;</string>
-    <string name="server_official_body">Θα αποσυνδεθείτε από τον προσαρμοσμένο διακομιστή και η εφαρμογή θα επανεκκινήσει με την επίσημη υπηρεσία.</string>
-    <string name="server_official_action">Χρήση επίσημου διακομιστή</string>
+    <string name="server_official_title">Χρήση διακομιστή SINEMAQ;</string>
+    <string name="server_official_body">Θα αποσυνδεθείτε από τον προσαρμοσμένο διακομιστή και η εφαρμογή θα επανεκκινήσει με την υπηρεσία SINEMAQ.</string>
+    <string name="server_official_action">Χρήση διακομιστή SINEMAQ</string>
     <string name="server_switching">Εναλλαγή…</string>
     <string name="server_error_invalid_url">Εισαγάγετε ένα έγκυρο URL διακομιστή HTTP ή HTTPS.</string>
-    <string name="server_error_official_active">Το api.nuvio.tv είναι ο επίσημος διακομιστής και είναι ήδη επιλεγμένο.</string>
-    <string name="server_error_official_available">Το api.nuvio.tv είναι ο επίσημος διακομιστής. Κλείστε αυτό το παράθυρο διαλόγου και επιλέξτε «Χρήση επίσημου διακομιστή» για να επιστρέψετε.</string>
+    <string name="server_error_official_active">Το SINEMAQ είναι ο επίσημος διακομιστής και είναι ήδη επιλεγμένο.</string>
+    <string name="server_error_official_available">Το SINEMAQ είναι ο επίσημος διακομιστής. Κλείστε αυτό το παράθυρο διαλόγου και επιλέξτε «Χρήση διακομιστή SINEMAQ» για να επιστρέψετε.</string>
     <string name="server_error_connection">Δεν ήταν δυνατή η πρόσβαση στο τελικό σημείο ανακάλυψης. Ελέγξτε το URL και τη διαθεσιμότητα του διακομιστή.</string>
     <string name="server_error_http">Το τελικό σημείο ανακάλυψης επέστρεψε HTTP %1$d.</string>
     <string name="server_error_response_too_large">Το έγγραφο ανακάλυψης είναι μεγαλύτερο από το επιτρεπόμενο.</string>

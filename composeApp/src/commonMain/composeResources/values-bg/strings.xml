@@ -349,7 +349,7 @@
     <string name="compose_auth_link_code_expired">Срокът на валидност на този код изтече.</string>
     <string name="compose_auth_link_creating_code">Създаване на код…</string>
     <string name="compose_auth_link_failed">Влизането чрез линка се провали. </string>
-    <string name="compose_auth_link_open">Отвори nuvio.tv/link</string>
+    <string name="compose_auth_link_open">Отвори връзката за вход</string>
     <string name="compose_auth_link_open_failed">Линкът не може да се отвори.</string>
     <string name="compose_auth_link_sign_in">Влез чрез линк</string>
     <string name="compose_auth_link_signing_in">Влизане…</string>
@@ -367,7 +367,7 @@
     <string name="compose_auth_terms_link">Условията</string>
     <string name="compose_auth_welcome_back">Добре дошли отново</string>
     <string name="server_menu_content_description">Сървър</string>
-    <string name="server_menu_official">Официален</string>
+    <string name="server_menu_official">Използвай сървъра на SINEMAQ</string>
     <string name="server_menu_custom">Персонализиран</string>
     <string name="server_menu_change_custom">Промяна на персонализирания сървър</string>
     <string name="server_connect_title">Свързване към сървър</string>
@@ -387,13 +387,13 @@
     <string name="server_warning_private">Този сървър изглежда частен.</string>
     <string name="server_warning_credentials">Не въвеждайте идентификационни данни, освен ако не се доверявате на този сървър.</string>
     <string name="server_review_trust">Доверявам се на този сървър</string>
-    <string name="server_official_title">Официален сървър</string>
-    <string name="server_official_body">Това ще превключи към официалния сървър.</string>
-    <string name="server_official_action">Използвай официалния сървър</string>
+    <string name="server_official_title">Да се използва ли сървърът на SINEMAQ?</string>
+    <string name="server_official_body">Ще бъдете отписани от персонализирания сървър и приложението ще се рестартира с услугата SINEMAQ.</string>
+    <string name="server_official_action">Използвай сървъра на SINEMAQ</string>
     <string name="server_switching">Превключване на сървъра…</string>
     <string name="server_error_invalid_url">Невалиден URL адрес на сървъра.</string>
-    <string name="server_error_official_active">Официалният сървър вече е активен.</string>
-    <string name="server_error_official_available">Официалният сървър не е наличен.</string>
+    <string name="server_error_official_active">SINEMAQ е официалният сървър и вече е избран.</string>
+    <string name="server_error_official_available">SINEMAQ е официалният сървър. Затворете този диалог и изберете „Използвай сървъра на SINEMAQ“, за да се върнете.</string>
     <string name="server_error_connection">Неуспешно свързване към сървъра.</string>
     <string name="server_error_http">Сървърът върна HTTP грешка.</string>
     <string name="server_error_response_too_large">Отговорът от сървъра е твърде голям.</string>

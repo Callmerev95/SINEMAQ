@@ -56,7 +56,7 @@
     <string name="compose_auth_link_code_expired">இந்தக் குறியீடு காலாவதியாகிவிட்டது.</string>
     <string name="compose_auth_link_creating_code">குறியீட்டை உருவாக்குகிறது…</string>
     <string name="compose_auth_link_failed">இணைப்பு வழி உள்நுழைவு தோல்வியடைந்தது.</string>
-    <string name="compose_auth_link_open">nuvio.tv/link-ஐத் திற</string>
+    <string name="compose_auth_link_open">உள்நுழைவு இணைப்பைத் திற</string>
     <string name="compose_auth_link_open_failed">இணைப்பைத் திறக்க முடியவில்லை.</string>
     <string name="compose_auth_link_sign_in">இணைப்பு மூலம் உள்நுழைக</string>
     <string name="compose_auth_link_signing_in">உள்நுழைகிறது…</string>
@@ -74,7 +74,7 @@
     <string name="compose_auth_terms_link">விதிமுறைகள்</string>
     <string name="compose_auth_welcome_back">மீண்டும் வருக</string>
     <string name="server_menu_content_description">சேவையக விருப்பங்கள்</string>
-    <string name="server_menu_official">அதிகாரப்பூர்வ சேவையகத்தைப் பயன்படுத்து</string>
+    <string name="server_menu_official">SINEMAQ சேவையகத்தைப் பயன்படுத்து</string>
     <string name="server_menu_custom">தனிப்பயன் சேவையகத்துடன் இணை</string>
     <string name="server_menu_change_custom">வேறு சேவையகத்துடன் இணை</string>
     <string name="server_connect_title">தனிப்பயன் சேவையகத்துடன் இணை</string>
@@ -94,10 +94,10 @@
     <string name="server_warning_private">இது தனிப்பட்ட நெட்வொர்க் சேவையகமாகத் தெரிகிறது; இருப்பினும் இதைக் கட்டுப்படுத்துபவர் யார் என்பதை பயன்பாட்டால் உறுதிப்படுத்த முடியாது.</string>
     <string name="server_warning_credentials">இந்தச் சேவையக இயக்குநர் உங்கள் கணக்கு உள்நுழைவு விவரங்களையும் இதன் மூலம் ஒத்திசைக்கும் தரவையும் பெறக்கூடும்.</string>
     <string name="server_review_trust">இந்தச் சேவையகத்தை நம்புகிறேன்</string>
-    <string name="server_official_title">அதிகாரப்பூர்வ சேவையகத்தைப் பயன்படுத்தவா?</string>
-    <string name="server_official_body">தனிப்பயன் சேவையகத்திலிருந்து வெளியேறி, அதிகாரப்பூர்வ சேவையகத்துடன் பயன்பாடு மீண்டும் தொடங்கும்.</string>
-    <string name="server_official_action">அதிகாரப்பூர்வ சேவையகத்தைப் பயன்படுத்து</string>
+    <string name="server_official_title">SINEMAQ சேவையகத்தைப் பயன்படுத்தவா?</string>
+    <string name="server_official_body">தனிப்பயன் சேவையகத்திலிருந்து வெளியேறி, SINEMAQ சேவையுடன் பயன்பாடு மீண்டும் தொடங்கும்.</string>
+    <string name="server_official_action">SINEMAQ சேவையகத்தைப் பயன்படுத்து</string>
     <string name="server_switching">மாற்றுகிறது…</string>
     <string name="server_error_invalid_url">சரியான HTTP அல்லது HTTPS Backend URL-ஐ உள்ளிடவும்.</string>
-    <string name="server_error_official_active">api.nuvio.tv அதிகாரப்பூர்வ சேவையகம்; அது ஏற்கனவே தேர்ந்தெடுக்கப்பட்டுள்ளது.</string>
+    <string name="server_error_official_active">SINEMAQ அதிகாரப்பூர்வ சேவையகம்; அது ஏற்கனவே தேர்ந்தெடுக்கப்பட்டுள்ளது.</string>
 </resources>

@@ -355,7 +355,7 @@
     <string name="compose_auth_link_code_expired">انتهت صلاحية هذا الرمز.</string>
     <string name="compose_auth_link_creating_code">جارٍ إنشاء الرمز…</string>
     <string name="compose_auth_link_failed">فشل تسجيل الدخول عبر الرابط.</string>
-    <string name="compose_auth_link_open">افتح nuvio.tv/link</string>
+    <string name="compose_auth_link_open">فتح رابط تسجيل الدخول</string>
     <string name="compose_auth_link_open_failed">تعذر فتح الرابط.</string>
     <string name="compose_auth_link_sign_in">تسجيل الدخول عبر الرابط</string>
     <string name="compose_auth_link_signing_in">جارٍ تسجيل الدخول…</string>
@@ -373,7 +373,7 @@
     <string name="compose_auth_terms_link">الشروط</string>
     <string name="compose_auth_welcome_back">مرحبًا بعودتك</string>
     <string name="server_menu_content_description">خيارات الخادم</string>
-    <string name="server_menu_official">استخدام الخادم الرسمي</string>
+    <string name="server_menu_official">استخدام خادم SINEMAQ</string>
     <string name="server_menu_custom">الاتصال بخادم مخصص</string>
     <string name="server_menu_change_custom">الاتصال بخادم آخر</string>
     <string name="server_connect_title">الاتصال بخادم مخصص</string>
@@ -393,13 +393,13 @@
     <string name="server_warning_private">يبدو أن هذا خادم على شبكة خاصة، لكن التطبيق لا يزال غير قادر على التحقق من الجهة التي تتحكم فيه.</string>
     <string name="server_warning_credentials">يمكن لمشغّل الخادم تلقي بيانات اعتماد حسابك والوصول إلى البيانات التي تزامنها عبر هذا الخادم.</string>
     <string name="server_review_trust">أثق بهذا الخادم</string>
-    <string name="server_official_title">هل تريد استخدام الخادم الرسمي؟</string>
-    <string name="server_official_body">سيتم تسجيل خروجك من الخادم المخصص وستتم إعادة تشغيل التطبيق باستخدام الخدمة الرسمية.</string>
-    <string name="server_official_action">استخدام الخادم الرسمي</string>
+    <string name="server_official_title">هل تريد استخدام خادم SINEMAQ؟</string>
+    <string name="server_official_body">سيتم تسجيل خروجك من الخادم المخصص وستتم إعادة تشغيل التطبيق باستخدام خدمة SINEMAQ.</string>
+    <string name="server_official_action">استخدام خادم SINEMAQ</string>
     <string name="server_switching">جارٍ التبديل…</string>
     <string name="server_error_invalid_url">أدخل عنوان URL صالحًا للواجهة الخلفية بصيغة HTTP أو HTTPS.</string>
-    <string name="server_error_official_active">api.nuvio.tv هو الخادم الرسمي وهو محدد بالفعل.</string>
-    <string name="server_error_official_available">api.nuvio.tv هو الخادم الرسمي. أغلق مربع الحوار هذا واختر «استخدام الخادم الرسمي» للعودة إليه.</string>
+    <string name="server_error_official_active">SINEMAQ هو الخادم الرسمي وهو محدد بالفعل.</string>
+    <string name="server_error_official_available">SINEMAQ هو الخادم الرسمي. أغلق مربع الحوار هذا واختر «استخدام خادم SINEMAQ» للعودة إليه.</string>
     <string name="server_error_connection">تعذّر الوصول إلى نقطة نهاية الاكتشاف. تحقّق من عنوان URL ومن توفر الخادم.</string>
     <string name="server_error_http">أعادت نقطة نهاية الاكتشاف رمز HTTP %1$d.</string>
     <string name="server_error_response_too_large">مستند الاكتشاف أكبر من الحجم المسموح.</string>

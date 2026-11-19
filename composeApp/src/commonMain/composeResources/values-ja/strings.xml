@@ -354,7 +354,7 @@
     <string name="compose_auth_link_code_expired">このコードは期限切れです。</string>
     <string name="compose_auth_link_creating_code">コードを作成中…</string>
     <string name="compose_auth_link_failed">リンクでのサインインに失敗しました。</string>
-    <string name="compose_auth_link_open">nuvio.tv/link を開く</string>
+    <string name="compose_auth_link_open">サインインリンクを開く</string>
     <string name="compose_auth_link_open_failed">リンクを開けませんでした。</string>
     <string name="compose_auth_link_sign_in">リンクでサインイン</string>
     <string name="compose_auth_link_signing_in">サインイン中…</string>
@@ -372,7 +372,7 @@
     <string name="compose_auth_terms_link">利用規約</string>
     <string name="compose_auth_welcome_back">おかえりなさい</string>
     <string name="server_menu_content_description">サーバーオプション</string>
-    <string name="server_menu_official">公式サーバーを使用</string>
+    <string name="server_menu_official">SINEMAQ サーバーを使用</string>
     <string name="server_menu_custom">カスタムサーバーに接続</string>
     <string name="server_menu_change_custom">別のサーバーに接続</string>
     <string name="server_connect_title">カスタムサーバーに接続</string>
@@ -392,13 +392,13 @@
     <string name="server_warning_private">プライベートネットワーク上のサーバーと思われますが、アプリはサーバーの管理者を確認できません。</string>
     <string name="server_warning_credentials">サーバーの運営者は、アカウントの認証情報を受け取り、このサーバー経由で同期するデータにアクセスできます。</string>
     <string name="server_review_trust">このサーバーを信頼します</string>
-    <string name="server_official_title">公式サーバーを使用しますか？</string>
-    <string name="server_official_body">カスタムサーバーからサインアウトし、アプリが公式サービスで再起動します。</string>
-    <string name="server_official_action">公式サーバーを使用</string>
+    <string name="server_official_title">SINEMAQ サーバーを使用しますか？</string>
+    <string name="server_official_body">カスタムサーバーからサインアウトし、アプリが SINEMAQ サービスで再起動します。</string>
+    <string name="server_official_action">SINEMAQ サーバーを使用</string>
     <string name="server_switching">切り替え中…</string>
     <string name="server_error_invalid_url">有効なHTTPまたはHTTPSのバックエンドURLを入力してください。</string>
-    <string name="server_error_official_active">api.nuvio.tv は公式サーバーで、すでに選択されています。</string>
-    <string name="server_error_official_available">api.nuvio.tv は公式サーバーです。このダイアログを閉じて「公式サーバーを使用」を選択すると戻せます。</string>
+    <string name="server_error_official_active">SINEMAQ は公式サーバーで、すでに選択されています。</string>
+    <string name="server_error_official_available">SINEMAQ は公式サーバーです。このダイアログを閉じて「SINEMAQ サーバーを使用」を選択すると戻せます。</string>
     <string name="server_error_connection">ディスカバリーエンドポイントに接続できませんでした。URLとサーバーの稼働状況を確認してください。</string>
     <string name="server_error_http">ディスカバリーエンドポイントが HTTP %1$d を返しました。</string>
     <string name="server_error_response_too_large">ディスカバリードキュメントが許容サイズを超えています。</string>
