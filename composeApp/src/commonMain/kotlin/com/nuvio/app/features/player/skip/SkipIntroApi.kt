@@ -68,9 +68,12 @@ internal object SkipIntroApi {
         }
     }
 
-    suspend fun verifyIntroDbApiKey(apiKey: String): Boolean {
+    internal enum class IntroDbKeyCheck { Valid, Invalid, UrlNotConfigured }
+
+    suspend fun verifyIntroDbApiKey(apiKey: String): IntroDbKeyCheck {
         val baseUrl = IntroDbConfig.URL.trimEnd('/')
-        if (baseUrl.isBlank() || apiKey.isBlank()) return false
+        if (baseUrl.isBlank()) return IntroDbKeyCheck.UrlNotConfigured
+        if (apiKey.isBlank()) return IntroDbKeyCheck.Invalid
         val url = "$baseUrl/submit"
         val headers = mapOf(
             "Authorization" to "Bearer $apiKey",
@@ -83,19 +86,19 @@ internal object SkipIntroApi {
                 headers = headers,
                 body = "{}"
             )
-            
+
             // 400 means Auth passed but payload was empty/invalid -> Key is Valid
-            if (response.status == 400) return true
-            
+            if (response.status == 400) return IntroDbKeyCheck.Valid
+
             // 200/201 would also mean valid (though unexpected with empty body)
-            if (response.status == 200 || response.status == 201) return true
-            
+            if (response.status == 200 || response.status == 201) return IntroDbKeyCheck.Valid
+
             // Explicitly handle auth failures
-            if (response.status == 401 || response.status == 403) return false
-            
-            false
+            if (response.status == 401 || response.status == 403) return IntroDbKeyCheck.Invalid
+
+            IntroDbKeyCheck.Invalid
         } catch (_: Exception) {
-            false
+            IntroDbKeyCheck.Invalid
         }
     }
 

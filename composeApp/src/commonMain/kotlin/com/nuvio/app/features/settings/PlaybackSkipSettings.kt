@@ -192,6 +192,7 @@ private fun IntroDbApiKeyDialog(
     var isVerifying by remember { mutableStateOf(false) }
     var errorMessage by remember { mutableStateOf<String?>(null) }
     val invalidKeyMessage = stringResource(Res.string.settings_playback_introdb_invalid_key)
+    val urlNotConfiguredMessage = stringResource(Res.string.settings_playback_introdb_url_not_configured)
 
     DialogSurface(
         onDismissRequest = { if (!isVerifying) onDismiss() },
@@ -243,12 +244,13 @@ private fun IntroDbApiKeyDialog(
                     isVerifying = true
                     errorMessage = null
                     scope.launch {
-                        val isValid = com.nuvio.app.features.player.skip.SkipIntroRepository.verifyIntroDbApiKey(trimmed)
                         isVerifying = false
-                        if (isValid) {
-                            onSave(trimmed)
-                        } else {
-                            errorMessage = invalidKeyMessage
+                        when (com.nuvio.app.features.player.skip.SkipIntroRepository.verifyIntroDbApiKey(trimmed)) {
+                            com.nuvio.app.features.player.skip.SkipIntroApi.IntroDbKeyCheck.Valid -> onSave(trimmed)
+                            com.nuvio.app.features.player.skip.SkipIntroApi.IntroDbKeyCheck.UrlNotConfigured ->
+                                errorMessage = urlNotConfiguredMessage
+                            com.nuvio.app.features.player.skip.SkipIntroApi.IntroDbKeyCheck.Invalid ->
+                                errorMessage = invalidKeyMessage
                         }
                     }
                 },

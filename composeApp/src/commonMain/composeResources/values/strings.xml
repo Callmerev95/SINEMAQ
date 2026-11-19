@@ -2240,6 +2240,7 @@
     <string name="cloud_library_playback_disabled">Cloud library is disabled.</string>
     <!-- IntroDB settings -->
     <string name="settings_playback_introdb_invalid_api_key">Invalid API Key or connection failed</string>
+    <string name="settings_playback_introdb_url_not_configured">IntroDB server URL is not configured. The skip-intro feature cannot connect.</string>
     <string name="addons_manifest_missing_field">Manifest missing \"%1$s\"</string>
     <string name="collections_editor_tmdb_collection_title_format">TMDB Collection %1$s</string>
     <string name="collections_editor_tmdb_director_title_format">TMDB Director %1$s</string>

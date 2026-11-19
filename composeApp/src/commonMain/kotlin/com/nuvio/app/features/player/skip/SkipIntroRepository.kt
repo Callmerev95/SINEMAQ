@@ -293,7 +293,7 @@ object SkipIntroRepository {
         return SkipIntroApi.submitIntro(apiKey, request)
     }
 
-    suspend fun verifyIntroDbApiKey(apiKey: String): Boolean {
+    internal suspend fun verifyIntroDbApiKey(apiKey: String): SkipIntroApi.IntroDbKeyCheck {
         return SkipIntroApi.verifyIntroDbApiKey(apiKey)
     }
 

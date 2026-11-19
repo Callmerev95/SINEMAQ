@@ -44,3 +44,6 @@ sinemaq-avatar/
 avatars.csv
 avatars.json
 avatars_30.zip
+
+# Local handoff docs (not for publishing)
+sinemaq-handoff/
