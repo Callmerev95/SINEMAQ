@@ -350,6 +350,7 @@
     <string name="compose_auth_link_creating_code">Създаване на код…</string>
     <string name="compose_auth_link_failed">Влизането чрез линка се провали. </string>
     <string name="compose_auth_link_open">Отвори връзката за вход</string>
+    <string name="compose_auth_link_under_maintenance">В процес на поддръжка</string>
     <string name="compose_auth_link_open_failed">Линкът не може да се отвори.</string>
     <string name="compose_auth_link_sign_in">Влез чрез линк</string>
     <string name="compose_auth_link_signing_in">Влизане…</string>

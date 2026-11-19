@@ -355,6 +355,7 @@
     <string name="compose_auth_link_creating_code">Creando código…</string>
     <string name="compose_auth_link_failed">Error al iniciar sesión mediante enlace.</string>
     <string name="compose_auth_link_open">Abrir enlace de inicio de sesión</string>
+    <string name="compose_auth_link_under_maintenance">En mantenimiento</string>
     <string name="compose_auth_link_open_failed">No se pudo abrir el enlace.</string>
     <string name="compose_auth_link_sign_in">Iniciar sesión con enlace</string>
     <string name="compose_auth_link_signing_in">Iniciando sesión…</string>

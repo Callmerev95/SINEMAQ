@@ -2170,6 +2170,7 @@
     <string name="compose_auth_link_creating_code">Kód létrehozása...</string>
     <string name="compose_auth_link_failed">A hivatkozásos bejelentkezés sikertelen.</string>
     <string name="compose_auth_link_open">Bejelentkezési hivatkozás megnyitása</string>
+    <string name="compose_auth_link_under_maintenance">Karbantartás alatt</string>
     <string name="compose_auth_link_open_failed">A hivatkozást nem sikerült megnyitni.</string>
     <string name="compose_auth_link_sign_in">Bejelentkezés hivatkozással</string>
     <string name="compose_auth_link_signing_in">Bejelentkezés...</string>

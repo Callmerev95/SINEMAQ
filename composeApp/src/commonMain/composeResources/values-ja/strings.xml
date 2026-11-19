@@ -355,6 +355,7 @@
     <string name="compose_auth_link_creating_code">コードを作成中…</string>
     <string name="compose_auth_link_failed">リンクでのサインインに失敗しました。</string>
     <string name="compose_auth_link_open">サインインリンクを開く</string>
+    <string name="compose_auth_link_under_maintenance">メンテナンス中</string>
     <string name="compose_auth_link_open_failed">リンクを開けませんでした。</string>
     <string name="compose_auth_link_sign_in">リンクでサインイン</string>
     <string name="compose_auth_link_signing_in">サインイン中…</string>

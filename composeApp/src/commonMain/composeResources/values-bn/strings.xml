@@ -356,6 +356,7 @@
     <string name="compose_auth_link_creating_code">কোড তৈরি করা হচ্ছে…</string>
     <string name="compose_auth_link_failed">লিঙ্ক সাইন ইন ব্যর্থ হয়েছে।</string>
     <string name="compose_auth_link_open">সাইন-ইন লিংক খুলুন</string>
+    <string name="compose_auth_link_under_maintenance">রক্ষণাবেক্ষণ চলছে</string>
     <string name="compose_auth_link_open_failed">লিঙ্কটি খোলা যায়নি।</string>
     <string name="compose_auth_link_sign_in">লিঙ্ক দিয়ে সাইন ইন করুন</string>
     <string name="compose_auth_link_signing_in">সাইন ইন করা হচ্ছে…</string>

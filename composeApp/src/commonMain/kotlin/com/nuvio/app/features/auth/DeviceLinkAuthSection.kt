@@ -35,6 +35,7 @@ import nuvio.composeapp.generated.resources.compose_auth_link_creating_code
 import nuvio.composeapp.generated.resources.compose_auth_link_failed
 import nuvio.composeapp.generated.resources.compose_auth_link_open
 import nuvio.composeapp.generated.resources.compose_auth_link_open_failed
+import nuvio.composeapp.generated.resources.compose_auth_link_under_maintenance
 import nuvio.composeapp.generated.resources.compose_auth_link_sign_in
 import nuvio.composeapp.generated.resources.compose_auth_link_signing_in
 import nuvio.composeapp.generated.resources.compose_auth_link_try_again
@@ -168,6 +169,9 @@ internal fun DeviceLinkAuthSection(
                     text = when (state.reason) {
                         DeviceLinkAuthFailure.Expired -> {
                             stringResource(Res.string.compose_auth_link_code_expired)
+                        }
+                        DeviceLinkAuthFailure.UnderMaintenance -> {
+                            stringResource(Res.string.compose_auth_link_under_maintenance)
                         }
                         DeviceLinkAuthFailure.Start,
                         DeviceLinkAuthFailure.Complete,

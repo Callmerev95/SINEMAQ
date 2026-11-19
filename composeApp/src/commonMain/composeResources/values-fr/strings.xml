@@ -355,6 +355,7 @@
     <string name="compose_auth_link_creating_code">Création du code…</string>
     <string name="compose_auth_link_failed">Échec de la connexion par lien.</string>
     <string name="compose_auth_link_open">Ouvrir le lien de connexion</string>
+    <string name="compose_auth_link_under_maintenance">En maintenance</string>
     <string name="compose_auth_link_open_failed">Impossible d’ouvrir le lien.</string>
     <string name="compose_auth_link_sign_in">Se connecter avec un lien</string>
     <string name="compose_auth_link_signing_in">Connexion en cours…</string>

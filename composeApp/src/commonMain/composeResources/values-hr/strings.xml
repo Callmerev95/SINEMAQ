@@ -355,6 +355,7 @@
     <string name="compose_auth_link_creating_code">Stvaranje kôda…</string>
     <string name="compose_auth_link_failed">Prijava putem veze nije uspjela.</string>
     <string name="compose_auth_link_open">Otvori poveznicu za prijavu</string>
+    <string name="compose_auth_link_under_maintenance">U održavanju</string>
     <string name="compose_auth_link_open_failed">Otvaranje veze nije uspjelo.</string>
     <string name="compose_auth_link_sign_in">Prijavite se putem veze</string>
     <string name="compose_auth_link_signing_in">Prijava…</string>

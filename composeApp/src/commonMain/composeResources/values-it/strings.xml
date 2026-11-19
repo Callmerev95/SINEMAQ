@@ -2281,6 +2281,7 @@
     <string name="compose_auth_link_creating_code">Generazione del codice…</string>
     <string name="compose_auth_link_failed">Accesso tramite link non riuscito.</string>
     <string name="compose_auth_link_open">Apri il link di accesso</string>
+    <string name="compose_auth_link_under_maintenance">In manutenzione</string>
     <string name="compose_auth_link_open_failed">Impossibile aprire il link.</string>
     <string name="compose_auth_link_sign_in">Accedi tramite link</string>
     <string name="compose_auth_link_try_again">Riprova</string>

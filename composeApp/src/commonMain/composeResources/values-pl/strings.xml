@@ -2065,6 +2065,7 @@
     <string name="compose_auth_link_creating_code">Tworzenie kodu…</string>
     <string name="compose_auth_link_failed">Logowanie przez link nie powiodło się.</string>
     <string name="compose_auth_link_open">Otwórz link logowania</string>
+    <string name="compose_auth_link_under_maintenance">W trakcie konserwacji</string>
     <string name="compose_auth_link_open_failed">Nie udało się otworzyć linku.</string>
     <string name="compose_auth_link_sign_in">Zaloguj przez Link</string>
     <string name="compose_auth_link_signing_in">Logowanie…</string>

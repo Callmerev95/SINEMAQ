@@ -2248,6 +2248,7 @@ Bu özelliği tamamen kendi sorumluluğunuzda kullanırsınız. P2P istediğiniz
     <string name="compose_auth_link_creating_code">Kod oluşturuluyor…</string>
     <string name="compose_auth_link_failed">Bağlantıyla giriş başarısız oldu.</string>
     <string name="compose_auth_link_open">Oturum açma bağlantısını aç</string>
+    <string name="compose_auth_link_under_maintenance">Bakım altında</string>
     <string name="compose_auth_link_open_failed">Bağlantı açılamadı.</string>
     <string name="compose_auth_link_sign_in">Bağlantı ile Giriş Yap</string>
     <string name="compose_auth_link_signing_in">Giriş yapılıyor…</string>

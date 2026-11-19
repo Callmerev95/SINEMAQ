@@ -57,6 +57,7 @@
     <string name="compose_auth_link_creating_code">குறியீட்டை உருவாக்குகிறது…</string>
     <string name="compose_auth_link_failed">இணைப்பு வழி உள்நுழைவு தோல்வியடைந்தது.</string>
     <string name="compose_auth_link_open">உள்நுழைவு இணைப்பைத் திற</string>
+    <string name="compose_auth_link_under_maintenance">பராமரிப்பில்</string>
     <string name="compose_auth_link_open_failed">இணைப்பைத் திறக்க முடியவில்லை.</string>
     <string name="compose_auth_link_sign_in">இணைப்பு மூலம் உள்நுழைக</string>
     <string name="compose_auth_link_signing_in">உள்நுழைகிறது…</string>

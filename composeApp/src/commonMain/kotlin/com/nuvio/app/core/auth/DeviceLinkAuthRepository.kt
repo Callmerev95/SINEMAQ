@@ -47,12 +47,12 @@ enum class DeviceLinkAuthFailure {
     Start,
     Expired,
     Complete,
+    UnderMaintenance,
 }
 
 object DeviceLinkAuthRepository {
     private const val maxConsecutivePollFailures = 3
     private const val maxPollAttempts = 120
-    private const val officialLinkUrl = "https://nuvio.tv/link"
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
     private val log = Logger.withTag("DeviceLinkAuthRepository")
     private val json = Json { ignoreUnknownKeys = true }
@@ -63,6 +63,12 @@ object DeviceLinkAuthRepository {
     @OptIn(ExperimentalUuidApi::class)
     fun start() {
         if (_state.value is DeviceLinkAuthState.Starting || _state.value is DeviceLinkAuthState.Waiting) return
+        if (!ServerConfigurationRepository.active.value.isCustom) {
+            activeJob?.cancel()
+            activeJob = null
+            _state.value = DeviceLinkAuthState.Failed(DeviceLinkAuthFailure.UnderMaintenance)
+            return
+        }
 
         activeJob?.cancel()
         activeJob = scope.launch {
@@ -193,7 +199,7 @@ object DeviceLinkAuthRepository {
     }
 
     private fun ServerConfiguration.deviceLinkUrl(): String =
-        if (isCustom) "${backendUrl.trimEnd('/')}/link" else officialLinkUrl
+        "${backendUrl.trimEnd('/')}/link"
 }
 
 internal fun formatDeviceLinkCode(value: String): String {

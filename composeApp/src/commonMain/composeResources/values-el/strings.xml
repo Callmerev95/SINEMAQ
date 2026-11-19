@@ -140,6 +140,7 @@
     <string name="compose_auth_link_creating_code">Δημιουργία κωδικού…</string>
     <string name="compose_auth_link_failed">Η σύνδεση μέσω συνδέσμου απέτυχε.</string>
     <string name="compose_auth_link_open">Άνοιγμα συνδέσμου σύνδεσης</string>
+    <string name="compose_auth_link_under_maintenance">Υπό συντήρηση</string>
     <string name="compose_auth_link_open_failed">Δεν ήταν δυνατό το άνοιγμα του συνδέσμου.</string>
     <string name="compose_auth_link_sign_in">Σύνδεση με σύνδεσμο</string>
     <string name="compose_auth_link_signing_in">Γίνεται σύνδεση…</string>

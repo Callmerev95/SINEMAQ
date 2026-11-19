@@ -355,6 +355,7 @@
     <string name="compose_auth_link_creating_code">Creating code…</string>
     <string name="compose_auth_link_failed">Link sign-in failed.</string>
     <string name="compose_auth_link_open">Open sign-in link</string>
+    <string name="compose_auth_link_under_maintenance">Under maintenance</string>
     <string name="compose_auth_link_open_failed">Couldn't open the link.</string>
     <string name="compose_auth_link_sign_in">Sign In with Link</string>
     <string name="compose_auth_link_signing_in">Signing in…</string>

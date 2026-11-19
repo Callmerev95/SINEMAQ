@@ -350,6 +350,7 @@
     <string name="compose_auth_link_creating_code">Создание кода…</string>
     <string name="compose_auth_link_failed">Не удалось войти по ссылке.</string>
     <string name="compose_auth_link_open">Открыть ссылку для входа</string>
+    <string name="compose_auth_link_under_maintenance">На техническом обслуживании</string>
     <string name="compose_auth_link_open_failed">Не удалось открыть ссылку.</string>
     <string name="compose_auth_link_sign_in">Войти по ссылке</string>
     <string name="compose_auth_link_signing_in">Вход в систему…</string>

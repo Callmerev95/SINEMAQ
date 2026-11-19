@@ -356,6 +356,7 @@
     <string name="compose_auth_link_creating_code">جارٍ إنشاء الرمز…</string>
     <string name="compose_auth_link_failed">فشل تسجيل الدخول عبر الرابط.</string>
     <string name="compose_auth_link_open">فتح رابط تسجيل الدخول</string>
+    <string name="compose_auth_link_under_maintenance">قيد الصيانة</string>
     <string name="compose_auth_link_open_failed">تعذر فتح الرابط.</string>
     <string name="compose_auth_link_sign_in">تسجيل الدخول عبر الرابط</string>
     <string name="compose_auth_link_signing_in">جارٍ تسجيل الدخول…</string>
