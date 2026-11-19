@@ -47,7 +47,7 @@ private const val PremiumizeUrl = "https://www.premiumize.me"
 private const val TorboxUrl = "https://torbox.app"
 private const val MdbListUrl = "https://mdblist.com"
 private const val IntroDbUrl = "https://introdb.app/"
-private const val NuvioRepositoryUrl = "https://github.com/NuvioMedia/NuvioMobile"
+private const val SourceRepositoryUrl = "https://github.com/Callmerev95/SINEMAQ"
 private const val MpvKitUrl = "https://github.com/mpvkit/MPVKit"
 private const val ApacheLicenseUrl = "https://www.apache.org/licenses/LICENSE-2.0"
 private const val HazeLicenseUrl = "https://github.com/chrisbanes/haze/blob/1.7.2/LICENSE"
@@ -62,7 +62,7 @@ private data class AttributionItem(
 
 private data class LicenseItem(
     val titleRes: StringResource,
-    val bodyRes: StringResource,
+    val bodyRes: StringResource?,
     val licenseRes: StringResource,
     val link: String,
 )
@@ -220,13 +220,9 @@ private fun LicenseRow(
     isTablet: Boolean,
 ) {
     val uriHandler = LocalUriHandler.current
-    val itemBody = stringResource(item.bodyRes)
+    val itemBody = item.bodyRes?.let { stringResource(it) }
     val itemLicense = stringResource(item.licenseRes)
-    val body = buildString {
-        append(itemBody)
-        append("\n")
-        append(itemLicense)
-    }
+    val body = listOfNotNull(itemBody, itemLicense).joinToString("\n")
     LinkedPlainRow(
         title = stringResource(item.titleRes),
         body = body,
@@ -390,9 +386,9 @@ private fun attributionItems(): List<AttributionItem> = listOf(
 private fun appLicenseItem(): LicenseItem =
     LicenseItem(
         titleRes = Res.string.settings_licenses_attributions_nuvio_title,
-        bodyRes = Res.string.settings_licenses_attributions_nuvio_body,
+        bodyRes = null,
         licenseRes = Res.string.settings_licenses_attributions_nuvio_license,
-        link = NuvioRepositoryUrl,
+        link = SourceRepositoryUrl,
     )
 
 private fun platformLicenseItem(): LicenseItem =

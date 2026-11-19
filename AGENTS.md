@@ -4,7 +4,7 @@ A media streaming app for Android/iOS/TV, rebranded from [NuvioMobile](https://g
 
 ## Project facts
 
-- **Upstream origin**: NuvioMedia/NuvioMobile (GPLv3). This fork keeps GPLv3 and full upstream attribution.
+- **Upstream origin**: NuvioMedia/NuvioMobile (GPLv3). This fork keeps GPLv3; upstream attribution lives in repo docs/README only, not in app UI. In-app license row links to this fork's source.
 - **Brand**: SINEMAQ. Application ID `com.sinemaq.app` (debug `com.sinemaqdebug.com`), iOS bundle `com.sinemaq.media`.
 - **Internal Kotlin packages stay `com.nuvio.app`** (deliberate — minimises rebrand risk). See ticket T1.
 - **Build** (Android): `JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/Contents/Home ./gradlew :androidApp:assembleFullDebug`
