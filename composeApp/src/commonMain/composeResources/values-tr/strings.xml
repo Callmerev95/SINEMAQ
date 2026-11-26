@@ -2553,7 +2553,7 @@ Bu özelliği tamamen kendi sorumluluğunuzda kullanırsınız. P2P istediğiniz
     <string name="subtitle_shadow_size">Gölge boyutu</string>
     <string name="subtitle_reset_appearance">Görünümü sıfırla</string>
     <string name="addons_tracking_consent_title">İzleme eklentisi</string>
-    <string name="addons_tracking_consent_body">%1$s bir izleme eklentisidir. Nuvio etkinliklerinizi bu eklentiye gönderecektir: oynatma konumuyla birlikte ne oynattığınız, duraklattığınız ve durdurduğunuz, kitaplığınıza ne eklediğiniz veya kaldırdığınız ve neyi izlendi veya izlenmedi olarak işaretlediğiniz. Bu veriler Nuvio'dan ayrılır ve eklentinin geliştiricisi ve bağlandığı hizmet tarafından işlenir.</string>
+    <string name="addons_tracking_consent_body">%1$s bir izleme eklentisidir. SINEMAQ etkinliklerinizi bu eklentiye gönderecektir: oynatma konumuyla birlikte ne oynattığınız, duraklattığınız ve durdurduğunuz, kitaplığınıza ne eklediğiniz veya kaldırdığınız ve neyi izlendi veya izlenmedi olarak işaretlediğiniz. Bu veriler SINEMAQ'dan ayrılır ve eklentinin geliştiricisi ve bağlandığı hizmet tarafından işlenir.</string>
     <string name="addons_tracking_consent_checkbox">İzleme etkinliğimi ve kitaplığımı bu eklentiyle paylaşmayı kabul ediyorum</string>
     <string name="compose_player_audio_delay">Ses Gecikmesi</string>
     <string name="compose_player_audio_amplification">Yükseltme</string>
@@ -2584,7 +2584,7 @@ Bu özelliği tamamen kendi sorumluluğunuzda kullanırsınız. P2P istediğiniz
     <string name="settings_playback_downmix_channels">Kanal Sayısı</string>
     <string name="settings_playback_downmix_maintain_volume">Aşağı Mikste Orijinal Sesi Koru</string>
     <string name="settings_playback_downmix_maintain_volume_description">Kapalıyken, miks normalleştirmesi genel ses düzeyini düşürebilir.</string>
-    <string name="auth_notice_signed_out">Nuvio oturumunuz kapatıldı. Lütfen tekrar giriş yapın.</string>
+    <string name="auth_notice_signed_out">SINEMAQ oturumunuz kapatıldı. Lütfen tekrar giriş yapın.</string>
     <string name="library_filter_genre">Tür</string>
     <string name="library_filter_watched">İzlendi</string>
     <string name="library_filter_year">Yıl</string>

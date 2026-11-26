@@ -61,7 +61,7 @@
     <string name="servers_failure_incomplete">A szerver könyvtárának ellenőrzése még folyamatban van. Próbáld újra egy pillanat múlva.</string>
     <string name="servers_failure_remote_playback">A Plex csak Plex Pass vagy Remote Watch Pass előfizetéssel engedi a lejátszást erről a szerverről az otthoni hálózaton kívül.</string>
     <string name="plex_add_description">Jelentkezz be a Plex-fiókoddal.</string>
-    <string name="plex_sign_in_subtitle">Jelentkezz be a plex.tv oldalon. A Plex-jelszavadat soha nem kell a Nuvióban megadnod.</string>
+    <string name="plex_sign_in_subtitle">Jelentkezz be a plex.tv oldalon. A Plex-jelszavadat soha nem kell a SINEMAQ-ban megadnod.</string>
     <string name="plex_continue">Folytatás a Plexszel</string>
     <string name="plex_browser_waiting">Fejezd be a bejelentkezést a plex.tv oldalon, majd térj vissza ide.</string>
     <string name="plex_use_code">Bejelentkezés másik eszközön</string>
