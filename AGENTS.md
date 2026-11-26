@@ -13,7 +13,7 @@ A media streaming app for Android/iOS/TV, rebranded from [NuvioMobile](https://g
 
 ## Upstream sync
 
-- Baseline: upstream `cmp-rewrite` @ `0d20af83`, merge `4cedec04`; versi app `1.1.0` (162).
+- Baseline: upstream `cmp-rewrite` @ `0d20af83`, merge `4cedec04`; versi app `1.1.0` (163).
 - Remote `upstream` ada; push dinonaktifkan (`no_push`).
 - Upstream `main` = jalur stabil dan tertinggal dari `cmp-rewrite`; cek keduanya sebelum sync.
 - Delta fork yang wajib dipertahankan: `store-beta.json` absen + guard `[[ -f "${source}" ]] || continue` + loop `git add`; gate prerelease di `android-release.yml` dan `update-store-source.yml`; secret `SINEMAQ_*`; `store.json`/`README.md` milik fork; `discontinue-legacy-main.yml` dihapus.
