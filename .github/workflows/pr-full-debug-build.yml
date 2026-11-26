@@ -3,7 +3,7 @@ name: PR Full Debug Build
 on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
-    branches: [cmp-rewrite]
+    branches: [main, cmp-rewrite]
   workflow_dispatch:
 
 permissions:
@@ -21,6 +21,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+
+      - name: Free disk space
+        run: |
+          df -h /
+          sudo rm -rf \
+            /usr/local/lib/android/sdk/ndk \
+            /usr/local/lib/android/sdk/ndk-bundle \
+            /usr/local/lib/android/sdk/emulator \
+            /usr/local/lib/android/sdk/system-images \
+            /usr/share/dotnet \
+            /opt/ghc \
+            /usr/local/share/boost
+          sudo apt-get clean
+          df -h /
 
       - name: Set up Java
         uses: actions/setup-java@v5
@@ -41,6 +55,11 @@ jobs:
           else
             touch local.properties
           fi
+
+      - name: Cap Gradle and Kotlin memory
+        run: |
+          sed -i -E 's#^org\.gradle\.jvmargs=.*#org.gradle.jvmargs=-Xmx6144m -XX:MaxMetaspaceSize=1536m -Dfile.encoding=UTF-8#' gradle.properties
+          sed -i -E 's#^kotlin\.daemon\.jvmargs=.*#kotlin.daemon.jvmargs=-Xmx5120m#' gradle.properties
 
       - name: Build fullDebug APK
         run: ./gradlew :androidApp:assembleFullDebug -Pnuvio.android.distribution=full -Pnuvio.ios.distribution=appstore --stacktrace

@@ -532,7 +532,7 @@
     <string name="compose_settings_root_check_updates_description">Preuzmite najnovije izdanje</string>
     <string name="compose_settings_root_check_updates_title">Provjeri ažuriranja</string>
     <string name="compose_settings_root_content_discovery_description">Upravljajte dodacima i izvorima za otkrivanje.</string>
-    <string name="compose_settings_root_content_discovery_description_appstore">Upravljajte dodacima i odaberite što se prikazuje u Nuviju.</string>
+    <string name="compose_settings_root_content_discovery_description_appstore">Upravljajte dodacima i odaberite što se prikazuje u SINEMAQ-u.</string>
     <string name="compose_settings_root_downloads_description">Upravljajte preuzetim filmovima i epizodama.</string>
     <string name="compose_settings_root_downloads_description_appstore">Upravljajte onime što ste spremili na ovaj uređaj.</string>
     <string name="compose_settings_root_downloads_title">Preuzimanja</string>
@@ -993,7 +993,7 @@
     <string name="settings_meta_tab_layout_description">Grupirajte odjeljke u kartice poput TV aplikacije. Dodijelite do 3 odjeljka po grupi kartica.</string>
     <string name="settings_meta_trailers">Najave</string>
     <string name="settings_meta_trailers_description">Traka s najavama i prečaci za reprodukciju.</string>
-    <string name="settings_notifications_disabled_in_app">Obavijesti su trenutačno onemogućene u Nuviju.</string>
+    <string name="settings_notifications_disabled_in_app">Obavijesti su trenutačno onemogućene u SINEMAQ-u.</string>
     <string name="settings_notifications_episode_release_alerts">Upozorenja o izlasku epizoda</string>
     <string name="settings_notifications_episode_release_alerts_description">Zakažite lokalne obavijesti kada nova epizoda spremljene serije postane dostupna.</string>
     <string name="settings_notifications_permission_disabled">Sustavne obavijesti su onemogućene za SINEMAQ. Omogućite ih za primanje upozorenja i probnih obavijesti.</string>
@@ -1008,7 +1008,7 @@
     <string name="community_section_title">Zajednica</string>
     <string name="community_section_description">Upoznajte ljude koji stvaraju i podržavaju SINEMAQ na mobilnim uređajima, televizorima i webu.</string>
     <string name="community_membership_title">SINEMAQ članstvo podupiratelja</string>
-    <string name="community_membership_description">Podrška Nuviju pomaže u pokrivanju infrastrukture i tekućeg razvoja, dok osnovno iskustvo ostaje besplatno za sve.</string>
+    <string name="community_membership_description">Podrška SINEMAQ-u pomaže u pokrivanju infrastrukture i tekućeg razvoja, dok osnovno iskustvo ostaje besplatno za sve.</string>
     <string name="community_view_supporter_membership">Pregledaj članstvo podupiratelja</string>
     <string name="community_membership_you_are">Vi ste</string>
     <string name="community_membership_thank_you">Hvala vam.</string>
@@ -1358,7 +1358,7 @@
     <string name="settings_simkl_sync_info_title">Kako funkcionira Simkl sinkronizacija</string>
     <string name="settings_simkl_sync_info_description">SINEMAQ automatski provjerava Simkl najviše jednom svakih %1$d minuta. Promjenama napravljenim putem druge aplikacije ili Simkl web stranice može trebati toliko vremena da se pojave.</string>
     <string name="settings_simkl_sync_info_activity">Svako osvježavanje prvo provjerava javlja li Simkl ikakve promjene i preuzima samo ažuriranja. To prati Simkl API pravila, smanjuje nepotrebnu potrošnju podataka i pomaže u održavanju stabilnosti usluge.</string>
-    <string name="settings_simkl_sync_info_manual">Promjene napravljene u Nuviju šalju se na Simkl odmah. Koristite Sinkroniziraj sada kada želite da SINEMAQ ranije provjeri udaljene promjene.</string>
+    <string name="settings_simkl_sync_info_manual">Promjene napravljene u SINEMAQ-u šalju se na Simkl odmah. Koristite Sinkroniziraj sada kada želite da SINEMAQ ranije provjeri udaljene promjene.</string>
     <string name="settings_simkl_sync_info_library_statuses">Serije stavljene na Simklove popise Na čekanju ili Odbačeno skrivene su iz Nastavi gledati. Ostaju skrivene sve dok se nalaze na bilo kojem od ta dva popisa.</string>
     <string name="settings_simkl_sync_info_docs">Pročitajte Simkl vodič za sinkronizaciju</string>
     <string name="settings_simkl_authorization_revoked">Simkl autorizacija je opozvana. Povežite se ponovno.</string>

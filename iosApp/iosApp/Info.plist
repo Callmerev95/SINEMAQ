@@ -29,10 +29,13 @@
 		<string>ta</string>
 		<string>tr</string>
 		<string>ur</string>
+		<string>uk</string>
 		<string>nb</string>
 		<string>nl</string>
 		<string>ja</string>
 		<string>vi</string>
+		<string>zh</string>
+		<string>zh-Hant</string>
 	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
@@ -49,7 +52,7 @@
 		</dict>
 	</array>
 	<key>NSLocalNetworkUsageDescription</key>
-	<string>Nuvio connects to media servers on your local network.</string>
+	<string>SINEMAQ connects to media servers on your local network.</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
