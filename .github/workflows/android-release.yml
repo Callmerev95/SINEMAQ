@@ -331,7 +331,7 @@ jobs:
 
   store:
     name: Update sideload source
-    if: inputs.mode == 'publish'
+    if: inputs.mode == 'publish' && needs.prepare.outputs.prerelease != 'true'
     needs:
       - prepare
       - release

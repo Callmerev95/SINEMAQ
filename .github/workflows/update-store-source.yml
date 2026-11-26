@@ -29,6 +29,7 @@ concurrency:
 jobs:
   update:
     name: Update sideload sources
+    if: github.event_name != 'release' || !github.event.release.prerelease
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ github.token }}
