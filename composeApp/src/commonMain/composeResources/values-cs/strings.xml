@@ -32,7 +32,7 @@
     <string name="addons_badge_unavailable">Nedostupné</string>
     <string name="addons_configure">Konfigurovat doplněk</string>
     <string name="addons_delete">Smazat doplněk</string>
-    <string name="addons_appstore_add_description">Přeneste svou knihovnu do Nuvia pomocí doplňků, které používáte.</string>
+    <string name="addons_appstore_add_description">Přeneste svou knihovnu do SINEMAQ pomocí doplňků, které používáte.</string>
     <string name="addons_appstore_empty_subtitle">Přidejte doplněk a začněte vytvářet svou knihovnu.</string>
     <string name="addons_appstore_empty_title">Přizpůsobte si SINEMAQ.</string>
     <string name="addons_appstore_input_placeholder">URL doplňku</string>
@@ -446,7 +446,7 @@
     <string name="compose_settings_root_check_updates_description">Stáhnout nejnovější verzi</string>
     <string name="compose_settings_root_check_updates_title">Zkontrolovat aktualizace</string>
     <string name="compose_settings_root_content_discovery_description">Správa doplňků a zdrojů objevování.</string>
-    <string name="compose_settings_root_content_discovery_description_appstore">Spravujte doplňky a vyberte, co se má v Nuviu zobrazovat.</string>
+    <string name="compose_settings_root_content_discovery_description_appstore">Spravujte doplňky a vyberte, co se má v SINEMAQ zobrazovat.</string>
     <string name="compose_settings_root_downloads_description">Spravujte své stažené filmy a epizody.</string>
     <string name="compose_settings_root_downloads_description_appstore">Spravujte obsah uložený v tomto zařízení.</string>
     <string name="compose_settings_root_downloads_title">Stažené položky</string>
@@ -642,7 +642,7 @@
     <string name="settings_content_discovery_section_home">DOMŮ</string>
     <string name="settings_content_discovery_section_sources">ZDROJE</string>
     <string name="settings_content_discovery_addons_description">Instalovat, odstraňovat, obnovovat a třídit vaše zdroje obsahu.</string>
-    <string name="settings_content_discovery_addons_description_appstore">Přidávejte a spravujte doplňky, které používáte s Nuviem.</string>
+    <string name="settings_content_discovery_addons_description_appstore">Přidávejte a spravujte doplňky, které používáte se SINEMAQ.</string>
     <string name="settings_content_discovery_plugins_description">Instalovat repozitáře pro JavaScriptové scarpování a testovat poskytovatele interně.</string>
     <string name="settings_content_discovery_homescreen_description">Upravit rozvržení domovské obrazovky, viditelnost obsahu a chování plakátů.</string>
     <string name="settings_content_discovery_meta_screen_description">Nastavení pro obrazovku detailu a epizody.</string>
@@ -2091,7 +2091,7 @@
     <string name="settings_meta_background_mode_dominant">Dominantní barva</string>
     <string name="settings_meta_background_mode_dominant_description">Přizpůsobit pozadí stránky hlavní barvě obrázku na pozadí.</string>
     <string name="community_membership_title">Členství podporovatele SINEMAQ</string>
-    <string name="community_membership_description">Podpora Nuvia pomáhá pokrýt infrastrukturu a průběžný vývoj a zároveň zachovat základní funkce zdarma pro všechny.</string>
+    <string name="community_membership_description">Podpora SINEMAQ pomáhá pokrýt infrastrukturu a průběžný vývoj a zároveň zachovat základní funkce zdarma pro všechny.</string>
     <string name="community_view_supporter_membership">Zobrazit členství podporovatele</string>
     <string name="community_membership_you_are">Jste</string>
     <string name="community_membership_thank_you">Děkujeme.</string>
@@ -2117,8 +2117,8 @@
     <string name="settings_tracking_approval_redirect">Po schválení budete automaticky přesměrováni zpět.</string>
     <string name="settings_tracking_connect_first">Nejprve připojte %1$s</string>
     <string name="settings_tracking_disconnect_title">Odpojit %1$s?</string>
-    <string name="settings_tracking_disconnect_description">Tímto se připojení odebere z Nuvia. Vaše data na %1$s zůstanou zachována a nedostupné zdroje knihovny nebo průběhu se dočasně přepnou na SINEMAQ.</string>
-    <string name="settings_trakt_disconnect_description">Tímto odpojíte účet služby Trakt od Nuvia.</string>
+    <string name="settings_tracking_disconnect_description">Tímto se připojení odebere ze SINEMAQ. Vaše data na %1$s zůstanou zachována a nedostupné zdroje knihovny nebo průběhu se dočasně přepnou na SINEMAQ.</string>
+    <string name="settings_trakt_disconnect_description">Tímto odpojíte účet služby Trakt od SINEMAQ.</string>
     <string name="settings_simkl_disconnect_description">Tímto se z profilu odebere účet Simkl a data Simkl uložená v mezipaměti.</string>
     <string name="settings_tracking_source_fallback">Služba %1$s není dostupná. Do opětovného připojení se používá %2$s.</string>
     <string name="settings_tracking_progress_refresh_failed">Zdroj byl změněn, ale nejnovější průběh sledování se nepodařilo obnovit.</string>
