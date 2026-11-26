@@ -61,7 +61,7 @@
     <string name="servers_failure_incomplete">仍在檢查此伺服器的媒體庫，請稍後再試。</string>
     <string name="servers_failure_remote_playback">Plex 僅允許擁有 Plex Pass 或 Remote Watch Pass 的使用者在家庭網路以外的地方播放此伺服器內容。</string>
     <string name="plex_add_description">使用你的 Plex 帳號登入。</string>
-    <string name="plex_sign_in_subtitle">在 plex.tv 上登入，系統絕不會在 Nuvio 中要求輸入你的 Plex 密碼。</string>
+    <string name="plex_sign_in_subtitle">在 plex.tv 上登入，系統絕不會在 SINEMAQ 中要求輸入你的 Plex 密碼。</string>
     <string name="plex_continue">使用 Plex 繼續</string>
     <string name="plex_browser_waiting">請在 plex.tv 完成登入後返回此畫面。</string>
     <string name="plex_use_code">在其他裝置上登入</string>
