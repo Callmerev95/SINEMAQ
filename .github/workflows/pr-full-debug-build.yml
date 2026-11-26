@@ -44,8 +44,8 @@ jobs:
 
       - name: Cap Gradle and Kotlin memory
         run: |
-          sed -i -E 's#^org\.gradle\.jvmargs=.*#org.gradle.jvmargs=-Xmx8192m -XX:MaxMetaspaceSize=1536m -Dfile.encoding=UTF-8#' gradle.properties
-          sed -i -E 's#^kotlin\.daemon\.jvmargs=.*#kotlin.daemon.jvmargs=-Xmx2048m#' gradle.properties
+          sed -i -E 's#^org\.gradle\.jvmargs=.*#org.gradle.jvmargs=-Xmx6144m -XX:MaxMetaspaceSize=1536m -Dfile.encoding=UTF-8#' gradle.properties
+          sed -i -E 's#^kotlin\.daemon\.jvmargs=.*#kotlin.daemon.jvmargs=-Xmx5120m#' gradle.properties
 
       - name: Build fullDebug APK
         run: ./gradlew :androidApp:assembleFullDebug -Pnuvio.android.distribution=full -Pnuvio.ios.distribution=appstore --stacktrace
