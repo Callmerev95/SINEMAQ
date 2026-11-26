@@ -190,7 +190,6 @@ jobs:
             SINEMAQ_RELEASE_KEY_ALIAS
             SINEMAQ_RELEASE_KEY_PASSWORD
             TRAKT_CLIENT_ID
-            TRAKT_CLIENT_SECRET
           )
           for property_name in "${required_properties[@]}"; do
             if ! grep -Eq "^${property_name}=.+" local.properties; then
@@ -211,7 +210,7 @@ jobs:
 
   ios:
     name: Build iOS IPA
-    if: inputs.mode != 'dry-run'
+    if: inputs.mode != 'dry-run' && vars.ENABLE_IOS_RELEASE == 'true'
     needs: prepare
     runs-on: xcode-27
     timeout-minutes: 120
@@ -285,7 +284,6 @@ jobs:
     needs:
       - prepare
       - android
-      - ios
     runs-on: ubuntu-latest
     permissions:
       contents: write

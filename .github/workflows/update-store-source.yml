@@ -45,6 +45,7 @@ jobs:
           fetch-depth: 0
 
       - name: Download and verify published IPA
+        id: ipa
         run: |
           release_json="${RUNNER_TEMP}/release.json"
           gh api "repos/${GITHUB_REPOSITORY}/releases/tags/${RELEASE_TAG}" > "${release_json}"
@@ -55,6 +56,12 @@ jobs:
           fi
 
           mapfile -t ipa_names < <(jq -r '.assets[] | select(.name | endswith(".ipa")) | .name' "${release_json}")
+          if (( ${#ipa_names[@]} == 0 )); then
+            echo "has_ipa=false" >> "$GITHUB_OUTPUT"
+            echo "No iOS IPA in this release; skipping sideload source update."
+            exit 0
+          fi
+          echo "has_ipa=true" >> "$GITHUB_OUTPUT"
           if (( ${#ipa_names[@]} != 1 )); then
             echo "Expected exactly one published IPA, found ${#ipa_names[@]}." >&2
             exit 1
@@ -83,6 +90,7 @@ jobs:
           fi
 
       - name: Update sideload sources
+        if: steps.ipa.outputs.has_ipa == 'true'
         run: |
           release_json="${RUNNER_TEMP}/release.json"
           release_notes="${RUNNER_TEMP}/release-notes.md"
@@ -112,6 +120,7 @@ jobs:
           done
 
       - name: Commit sideload sources
+        if: steps.ipa.outputs.has_ipa == 'true'
         run: |
           if [[ -z "$(git status --porcelain -- store.json store-beta.json)" ]]; then
             echo "Sideload sources are already current for ${RELEASE_VERSION}."
