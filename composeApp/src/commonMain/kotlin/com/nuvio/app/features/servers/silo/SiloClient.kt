@@ -44,13 +44,13 @@ internal class SiloClient(
 
     /** The name the server shows for this device in its list of signed-in devices. */
     val deviceName: String
-        get() = "Nuvio on ${if (isIos) "iOS" else "Android"}"
+        get() = "SINEMAQ on ${if (isIos) "iOS" else "Android"}"
 
     val deviceHeaders: Map<String, String>
         get() = mapOf(
             "X-Device-ID" to deviceId,
             "X-Silo-Device-Id" to deviceId,
-            "X-Client-Name" to "Nuvio",
+            "X-Client-Name" to "SINEMAQ",
             "X-Client-Version" to appVersion.take(MAX_HEADER),
         )
 
